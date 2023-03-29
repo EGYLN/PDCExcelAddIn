@@ -1,0 +1,64 @@
+name: PDCExcelADDIN.NET
+
+on:
+ workflow_dispatch:
+
+jobs:
+ build:
+
+    runs-on: [windows-latest]
+
+    steps:
+    - name: check out repo
+      uses: actions/checkout@v2
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+      
+    - name: output ref name
+      run: echo ${{ github.ref_name}}
+      
+    - name: Install dependencies
+      run: dotnet restore
+ 
+   # - name: Restore NuGet packages
+    #  run: nuget restore PDCExcelAddIn.sln
+      
+    - name: create build number
+      id: vars
+      run: |
+           echo "::set-output name=GITHUB_RUN_NUMBER_WITH_OFFSET::$(${{ github.run_number }})"
+      
+    - name: Patch Versionnumber
+      shell: powershell
+      run: |
+           ./"Patch Versionnumber.ps1"  -Version {{100}}
+    - name: Configure PdcLib for QA Build
+      shell: powershell
+      run: |
+           ./"Configure_PdcLib_for_QA_Build.ps1" -PdcBaseUrlQA ${{secrets.PdcBaseUrlQA}} -PdcServiceUrlQA ${{secrets.PdcServiceUrlQA}}
+   # - name: check
+   # run: |
+   #      cd ./bin/release/
+   #     "%DotNetFrameworkSDK4.0_x86_Path%\tlbexp.exe" OpenLib.dll OpenLib.tlb
+   #    "%DotNetFrameworkSDK4.0_x86_Path%\tlbexp.exe" PDCExcelAddIn.dll PDCExcelAddIn.tlb       
+    
+    - name: deploy 
+      run: Deploy.ps1
+      
+    - name: Configure for DEV Build
+      shell: powershell
+      run: |
+           ./"Configure_for_DEV_Build.ps1" -PdcBaseUrlDEV ${{secrets.PdcBaseUrlDEV}} -PdcServiceUrlDEV ${{secrets.PdcServiceUrlDEV}}  
+           
+    - name: Configure for PROD Build
+      shell: powershell
+      run: |
+           ./"Configure_for_PROD_Build.ps1" -PdcBaseUrlPROD ${{secrets.PdcBaseUrlPROD}} -PdcServiceUrlPROD ${{secrets.PdcServiceUrlPROD}}
+ 
+    - name: Build app for release
+      run: msbuild PDCExcelAddIn.sln -t:rebuild -verbosity:diag -property:Configuration=Release /p:Platform=AnyCPU
+    
+    - name: deploy 
+      run: Deploy.ps1
+           
