@@ -44,7 +44,7 @@ jobs:
    #    "%DotNetFrameworkSDK4.0_x86_Path%\tlbexp.exe" PDCExcelAddIn.dll PDCExcelAddIn.tlb       
     
     - name: deploy 
-      run: ./"Deploy.ps1"
+      run: ./"Deploy.ps1" -$APPLICATIONID -$BUILDNUMBER	 -$DEPLOYMENTDIRECTORY -$LANGUAGE -$STAGE -$WORKINGDIRECTORY
       
     - name: Configure for DEV Build
       shell: powershell
