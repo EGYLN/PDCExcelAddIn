@@ -58,7 +58,4 @@ jobs:
  
     - name: Build app for release
       run: msbuild PDCExcelAddIn.sln -t:rebuild -verbosity:diag -property:Configuration=Release /p:Platform=AnyCPU
-    
-    - name: deploy 
-      run: Deploy.ps1
-           
+          
