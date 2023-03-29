@@ -1,0 +1,81 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BBS.ST.BHC.BSP.PDC.Lib.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LDAPServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">QA-AD-LDAP.bayer-ag.com</Value>
+    </Setting>
+    <Setting Name="LDAP_OU_PEOPLE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">OU=people,O=bayer</Value>
+    </Setting>
+    <Setting Name="LDAP_PDC_USER_GROUP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CN=DE.BLN.PDC_User,OU=groups,O=bayer</Value>
+    </Setting>
+    <Setting Name="LDAP_PDC_ADMIN_GROUP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CN=DE.BLN.PDC_ADMIN,OU=groups,O=bayer</Value>
+    </Setting>
+    <Setting Name="LDAP_PDC_CURATOR_GROUP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CN=DE.BLN.PDC_CURATOR,OU=groups,O=bayer</Value>
+    </Setting>
+    <Setting Name="LDAP_PDC_DATAPROVIDER_GROUP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CN=DE.BLN.PDC_DP,OU=groups,O=bayer</Value>
+    </Setting>
+    <Setting Name="LDAP_PDC_AUTHOR_GROUP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CN=DE.BLN.PDC_TD_AUTHOR,OU=groups,O=bayer</Value>
+    </Setting>
+    <Setting Name="VALIDATION_BINARY_DATA_MAX_SIZE" Type="System.Int64" Scope="Application">
+      <Value Profile="(Default)">512</Value>
+    </Setting>
+    <Setting Name="WsCustomerManagement_PDCUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PDC</Value>
+    </Setting>
+    <Setting Name="WsCustomerManagement_License" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Tb8WpNTjf7uFtIHtVnMnZixEw0KFCTimJhzI5zctC/RNc6LuAhu3CLm5EbcyM4agBs9rGh0Bzm3zooiCMTE165TA+KE3SG+a</Value>
+    </Setting>
+    <Setting Name="UsePHUser" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ROLE_PDC_USER" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PDC_USER</Value>
+    </Setting>
+    <Setting Name="ROLE_PDC_ADMIN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PDC_ADMIN</Value>
+    </Setting>
+    <Setting Name="ROLE_PDC_CURATOR" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PDC_CURATOR</Value>
+    </Setting>
+    <Setting Name="ROLE_PDC_DATAPROVIDER" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PDC_DP</Value>
+    </Setting>
+    <Setting Name="ROLE_PDC_AUTHOR" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PDC_TD_AUTHOR</Value>
+    </Setting>
+    <Setting Name="DebugLogin" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PDC_Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://by-pdc-qa.bayer-ag.com/pdc</Value>
+    </Setting>
+    <Setting Name="PDCLib_pdcWS_PDCService" Type="(Web Service URL)" Scope="User">
+      <Value Profile="(Default)">https://by-pdc-qa.bayer-ag.com/pdc/services/PDCService</Value>
+    </Setting>
+    <Setting Name="Limit_ExperimentNoSearch" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="ROLE_PDC_USER_ICB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PDC_USER_ICB</Value>
+    </Setting>
+    <Setting Name="WsCustomerManagement_URL" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://phuser.intranet.cnb/wscustomermanagement_server/services/WsCustomerManagement</Value>
+    </Setting>
+    <Setting Name="VALIDATION_BINARY_DATA_FORMATS" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;string&gt;PDF&lt;/string&gt;
+  &lt;string&gt;PNG&lt;/string&gt;
+  &lt;string&gt;GIF&lt;/string&gt;
+  &lt;string&gt;JPG&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

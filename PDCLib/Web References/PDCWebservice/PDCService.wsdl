@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://multilingual.near.bayer.com/xsd" xmlns:ns1="http://exception.near.bayer.com/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://service.pdc.ws.bayer.com/xsd" targetNamespace="http://service.pdc.ws.bayer.com/xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:ns="http://service.pdc.ws.bayer.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.pdc.ws.bayer.com/xsd">
+      <xs:import namespace="http://exception.near.bayer.com/xsd" />
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Exception" nillable="true" type="xs:anyType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PDCException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="PDCException" nillable="true" type="ns:PDCException" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="PDCException">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns1:NearException">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="calculateDMSOAmount">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Input">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="config" nillable="true" type="ns:PDCParameter" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="input" nillable="true" type="ns:PDCParameter" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PDCParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="error" nillable="true" type="ns:PDCMessage" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="position" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="praefix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="unit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="valueBlob" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="valueChar" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="valueNum" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="variableId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="variableName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="variableType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PDCMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="messageType" nillable="true" type="ns:PDCMessageType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PDCMessageType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="logLevel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="calculateDMSOAmountResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Output">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="annotatedInput" nillable="true" type="ns:PDCParameter" />
+          <xs:element minOccurs="0" name="message" nillable="true" type="ns:PDCMessage" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="output" nillable="true" type="ns:PDCParameter" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="checkCompoundName">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkCompoundNameResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkUploadDataExists">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkUploadDataExistsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createErrorOrMessage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createErrorOrMessageResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteUpload">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteUploadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="executeNamedOperation">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anOperation" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="executeNamedOperationResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="findTestdefinition">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="findTestdefinitionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="findUploadData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="findUploadDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listPreparationNumbers">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listPreparationNumbersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listProjects">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listProjectsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="removeErrors">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="removeErrorsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="retrieveErrors">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="retrieveErrorsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="returnWeightAndStructure">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="returnWeightAndStructureResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateError">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateErrorResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateUpload">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateUploadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="uploadSingleEntry">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="uploadSingleEntryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="uploadTable">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="uploadTableResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="validateData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="anInput" nillable="true" type="ns:Input" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="validateDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Output" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:ax21="http://exception.near.bayer.com/xsd" xmlns:ax23="http://multilingual.near.bayer.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://exception.near.bayer.com/xsd">
+      <xs:import namespace="http://multilingual.near.bayer.com/xsd" />
+      <xs:import namespace="http://service.pdc.ws.bayer.com/xsd" />
+      <xs:complexType name="NearException">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ns0:Exception">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="cause" nillable="true" type="xs:anyType" />
+              <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="messageCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="originatorClassName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="originatorInstance" nillable="true" type="xs:anyType" />
+              <xs:element minOccurs="0" name="translator" nillable="true" type="ax23:Translator" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax22="http://multilingual.near.bayer.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://multilingual.near.bayer.com/xsd">
+      <xs:complexType name="Translator">
+        <xs:sequence />
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="updateUploadResponse">
+    <wsdl:part name="parameters" element="ns0:updateUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="PDCException">
+    <wsdl:part name="parameters" element="ns0:PDCException" />
+  </wsdl:message>
+  <wsdl:message name="findTestdefinitionRequest">
+    <wsdl:part name="parameters" element="ns0:findTestdefinition" />
+  </wsdl:message>
+  <wsdl:message name="returnWeightAndStructureResponse">
+    <wsdl:part name="parameters" element="ns0:returnWeightAndStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="uploadTableResponse">
+    <wsdl:part name="parameters" element="ns0:uploadTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkCompoundNameResponse">
+    <wsdl:part name="parameters" element="ns0:checkCompoundNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="returnWeightAndStructureRequest">
+    <wsdl:part name="parameters" element="ns0:returnWeightAndStructure" />
+  </wsdl:message>
+  <wsdl:message name="calculateDMSOAmountRequest">
+    <wsdl:part name="parameters" element="ns0:calculateDMSOAmount" />
+  </wsdl:message>
+  <wsdl:message name="uploadSingleEntryRequest">
+    <wsdl:part name="parameters" element="ns0:uploadSingleEntry" />
+  </wsdl:message>
+  <wsdl:message name="listPreparationNumbersRequest">
+    <wsdl:part name="parameters" element="ns0:listPreparationNumbers" />
+  </wsdl:message>
+  <wsdl:message name="uploadSingleEntryResponse">
+    <wsdl:part name="parameters" element="ns0:uploadSingleEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="findUploadDataRequest">
+    <wsdl:part name="parameters" element="ns0:findUploadData" />
+  </wsdl:message>
+  <wsdl:message name="removeErrorsRequest">
+    <wsdl:part name="parameters" element="ns0:removeErrors" />
+  </wsdl:message>
+  <wsdl:message name="updateErrorResponse">
+    <wsdl:part name="parameters" element="ns0:updateErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteUploadResponse">
+    <wsdl:part name="parameters" element="ns0:deleteUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteUploadRequest">
+    <wsdl:part name="parameters" element="ns0:deleteUpload" />
+  </wsdl:message>
+  <wsdl:message name="listPreparationNumbersResponse">
+    <wsdl:part name="parameters" element="ns0:listPreparationNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveErrorsRequest">
+    <wsdl:part name="parameters" element="ns0:retrieveErrors" />
+  </wsdl:message>
+  <wsdl:message name="createErrorOrMessageResponse">
+    <wsdl:part name="parameters" element="ns0:createErrorOrMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="listProjectsRequest">
+    <wsdl:part name="parameters" element="ns0:listProjects" />
+  </wsdl:message>
+  <wsdl:message name="createErrorOrMessageRequest">
+    <wsdl:part name="parameters" element="ns0:createErrorOrMessage" />
+  </wsdl:message>
+  <wsdl:message name="checkUploadDataExistsRequest">
+    <wsdl:part name="parameters" element="ns0:checkUploadDataExists" />
+  </wsdl:message>
+  <wsdl:message name="retrieveErrorsResponse">
+    <wsdl:part name="parameters" element="ns0:retrieveErrorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateDataRequest">
+    <wsdl:part name="parameters" element="ns0:validateData" />
+  </wsdl:message>
+  <wsdl:message name="checkCompoundNameRequest">
+    <wsdl:part name="parameters" element="ns0:checkCompoundName" />
+  </wsdl:message>
+  <wsdl:message name="executeNamedOperationRequest">
+    <wsdl:part name="parameters" element="ns0:executeNamedOperation" />
+  </wsdl:message>
+  <wsdl:message name="removeErrorsResponse">
+    <wsdl:part name="parameters" element="ns0:removeErrorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="findUploadDataResponse">
+    <wsdl:part name="parameters" element="ns0:findUploadDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="uploadTableRequest">
+    <wsdl:part name="parameters" element="ns0:uploadTable" />
+  </wsdl:message>
+  <wsdl:message name="listProjectsResponse">
+    <wsdl:part name="parameters" element="ns0:listProjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="executeNamedOperationResponse">
+    <wsdl:part name="parameters" element="ns0:executeNamedOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateDataResponse">
+    <wsdl:part name="parameters" element="ns0:validateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="calculateDMSOAmountResponse">
+    <wsdl:part name="parameters" element="ns0:calculateDMSOAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateErrorRequest">
+    <wsdl:part name="parameters" element="ns0:updateError" />
+  </wsdl:message>
+  <wsdl:message name="findTestdefinitionResponse">
+    <wsdl:part name="parameters" element="ns0:findTestdefinitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkUploadDataExistsResponse">
+    <wsdl:part name="parameters" element="ns0:checkUploadDataExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateUploadRequest">
+    <wsdl:part name="parameters" element="ns0:updateUpload" />
+  </wsdl:message>
+  <wsdl:portType name="PDCServicePortType">
+    <wsdl:operation name="findTestdefinition">
+      <wsdl:input wsaw:Action="urn:findTestdefinition" message="ns0:findTestdefinitionRequest" />
+      <wsdl:output wsaw:Action="urn:findTestdefinitionResponse" message="ns0:findTestdefinitionResponse" />
+      <wsdl:fault wsaw:Action="urn:findTestdefinitionPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="checkCompoundName">
+      <wsdl:input wsaw:Action="urn:checkCompoundName" message="ns0:checkCompoundNameRequest" />
+      <wsdl:output wsaw:Action="urn:checkCompoundNameResponse" message="ns0:checkCompoundNameResponse" />
+      <wsdl:fault wsaw:Action="urn:checkCompoundNamePDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="removeErrors">
+      <wsdl:input wsaw:Action="urn:removeErrors" message="ns0:removeErrorsRequest" />
+      <wsdl:output wsaw:Action="urn:removeErrorsResponse" message="ns0:removeErrorsResponse" />
+      <wsdl:fault wsaw:Action="urn:removeErrorsPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="validateData">
+      <wsdl:input wsaw:Action="urn:validateData" message="ns0:validateDataRequest" />
+      <wsdl:output wsaw:Action="urn:validateDataResponse" message="ns0:validateDataResponse" />
+      <wsdl:fault wsaw:Action="urn:validateDataPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="listPreparationNumbers">
+      <wsdl:input wsaw:Action="urn:listPreparationNumbers" message="ns0:listPreparationNumbersRequest" />
+      <wsdl:output wsaw:Action="urn:listPreparationNumbersResponse" message="ns0:listPreparationNumbersResponse" />
+      <wsdl:fault wsaw:Action="urn:listPreparationNumbersPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="createErrorOrMessage">
+      <wsdl:input wsaw:Action="urn:createErrorOrMessage" message="ns0:createErrorOrMessageRequest" />
+      <wsdl:output wsaw:Action="urn:createErrorOrMessageResponse" message="ns0:createErrorOrMessageResponse" />
+      <wsdl:fault wsaw:Action="urn:createErrorOrMessagePDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="calculateDMSOAmount">
+      <wsdl:input wsaw:Action="urn:calculateDMSOAmount" message="ns0:calculateDMSOAmountRequest" />
+      <wsdl:output wsaw:Action="urn:calculateDMSOAmountResponse" message="ns0:calculateDMSOAmountResponse" />
+      <wsdl:fault wsaw:Action="urn:calculateDMSOAmountPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="executeNamedOperation">
+      <wsdl:input wsaw:Action="urn:executeNamedOperation" message="ns0:executeNamedOperationRequest" />
+      <wsdl:output wsaw:Action="urn:executeNamedOperationResponse" message="ns0:executeNamedOperationResponse" />
+      <wsdl:fault wsaw:Action="urn:executeNamedOperationPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="listProjects">
+      <wsdl:input wsaw:Action="urn:listProjects" message="ns0:listProjectsRequest" />
+      <wsdl:output wsaw:Action="urn:listProjectsResponse" message="ns0:listProjectsResponse" />
+      <wsdl:fault wsaw:Action="urn:listProjectsPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveErrors">
+      <wsdl:input wsaw:Action="urn:retrieveErrors" message="ns0:retrieveErrorsRequest" />
+      <wsdl:output wsaw:Action="urn:retrieveErrorsResponse" message="ns0:retrieveErrorsResponse" />
+      <wsdl:fault wsaw:Action="urn:retrieveErrorsPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="findUploadData">
+      <wsdl:input wsaw:Action="urn:findUploadData" message="ns0:findUploadDataRequest" />
+      <wsdl:output wsaw:Action="urn:findUploadDataResponse" message="ns0:findUploadDataResponse" />
+      <wsdl:fault wsaw:Action="urn:findUploadDataPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="updateError">
+      <wsdl:input wsaw:Action="urn:updateError" message="ns0:updateErrorRequest" />
+      <wsdl:output wsaw:Action="urn:updateErrorResponse" message="ns0:updateErrorResponse" />
+      <wsdl:fault wsaw:Action="urn:updateErrorPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUpload">
+      <wsdl:input wsaw:Action="urn:deleteUpload" message="ns0:deleteUploadRequest" />
+      <wsdl:output wsaw:Action="urn:deleteUploadResponse" message="ns0:deleteUploadResponse" />
+      <wsdl:fault wsaw:Action="urn:deleteUploadPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadSingleEntry">
+      <wsdl:input wsaw:Action="urn:uploadSingleEntry" message="ns0:uploadSingleEntryRequest" />
+      <wsdl:output wsaw:Action="urn:uploadSingleEntryResponse" message="ns0:uploadSingleEntryResponse" />
+      <wsdl:fault wsaw:Action="urn:uploadSingleEntryPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadTable">
+      <wsdl:input wsaw:Action="urn:uploadTable" message="ns0:uploadTableRequest" />
+      <wsdl:output wsaw:Action="urn:uploadTableResponse" message="ns0:uploadTableResponse" />
+      <wsdl:fault wsaw:Action="urn:uploadTablePDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="checkUploadDataExists">
+      <wsdl:input wsaw:Action="urn:checkUploadDataExists" message="ns0:checkUploadDataExistsRequest" />
+      <wsdl:output wsaw:Action="urn:checkUploadDataExistsResponse" message="ns0:checkUploadDataExistsResponse" />
+      <wsdl:fault wsaw:Action="urn:checkUploadDataExistsPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUpload">
+      <wsdl:input wsaw:Action="urn:updateUpload" message="ns0:updateUploadRequest" />
+      <wsdl:output wsaw:Action="urn:updateUploadResponse" message="ns0:updateUploadResponse" />
+      <wsdl:fault wsaw:Action="urn:updateUploadPDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+    <wsdl:operation name="returnWeightAndStructure">
+      <wsdl:input wsaw:Action="urn:returnWeightAndStructure" message="ns0:returnWeightAndStructureRequest" />
+      <wsdl:output wsaw:Action="urn:returnWeightAndStructureResponse" message="ns0:returnWeightAndStructureResponse" />
+      <wsdl:fault wsaw:Action="urn:returnWeightAndStructurePDCException" name="PDCException" message="ns0:PDCException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PDCServiceSOAP11Binding" type="ns0:PDCServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findTestdefinition">
+      <soap:operation soapAction="urn:findTestdefinition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkCompoundName">
+      <soap:operation soapAction="urn:checkCompoundName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeErrors">
+      <soap:operation soapAction="urn:removeErrors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateData">
+      <soap:operation soapAction="urn:validateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listPreparationNumbers">
+      <soap:operation soapAction="urn:listPreparationNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createErrorOrMessage">
+      <soap:operation soapAction="urn:createErrorOrMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="calculateDMSOAmount">
+      <soap:operation soapAction="urn:calculateDMSOAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="executeNamedOperation">
+      <soap:operation soapAction="urn:executeNamedOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listProjects">
+      <soap:operation soapAction="urn:listProjects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveErrors">
+      <soap:operation soapAction="urn:retrieveErrors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findUploadData">
+      <soap:operation soapAction="urn:findUploadData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateError">
+      <soap:operation soapAction="urn:updateError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUpload">
+      <soap:operation soapAction="urn:deleteUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="uploadSingleEntry">
+      <soap:operation soapAction="urn:uploadSingleEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="uploadTable">
+      <soap:operation soapAction="urn:uploadTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkUploadDataExists">
+      <soap:operation soapAction="urn:checkUploadDataExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateUpload">
+      <soap:operation soapAction="urn:updateUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="returnWeightAndStructure">
+      <soap:operation soapAction="urn:returnWeightAndStructure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PDCServiceHttpBinding" type="ns0:PDCServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="findTestdefinition">
+      <http:operation location="PDCService/findTestdefinition" />
+      <wsdl:input>
+        <mime:content part="findTestdefinition" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="findTestdefinition" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCompoundName">
+      <http:operation location="PDCService/checkCompoundName" />
+      <wsdl:input>
+        <mime:content part="checkCompoundName" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="checkCompoundName" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeErrors">
+      <http:operation location="PDCService/removeErrors" />
+      <wsdl:input>
+        <mime:content part="removeErrors" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="removeErrors" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateData">
+      <http:operation location="PDCService/validateData" />
+      <wsdl:input>
+        <mime:content part="validateData" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="validateData" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listPreparationNumbers">
+      <http:operation location="PDCService/listPreparationNumbers" />
+      <wsdl:input>
+        <mime:content part="listPreparationNumbers" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="listPreparationNumbers" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createErrorOrMessage">
+      <http:operation location="PDCService/createErrorOrMessage" />
+      <wsdl:input>
+        <mime:content part="createErrorOrMessage" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="createErrorOrMessage" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculateDMSOAmount">
+      <http:operation location="PDCService/calculateDMSOAmount" />
+      <wsdl:input>
+        <mime:content part="calculateDMSOAmount" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="calculateDMSOAmount" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="executeNamedOperation">
+      <http:operation location="PDCService/executeNamedOperation" />
+      <wsdl:input>
+        <mime:content part="executeNamedOperation" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="executeNamedOperation" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listProjects">
+      <http:operation location="PDCService/listProjects" />
+      <wsdl:input>
+        <mime:content part="listProjects" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="listProjects" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveErrors">
+      <http:operation location="PDCService/retrieveErrors" />
+      <wsdl:input>
+        <mime:content part="retrieveErrors" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="retrieveErrors" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUploadData">
+      <http:operation location="PDCService/findUploadData" />
+      <wsdl:input>
+        <mime:content part="findUploadData" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="findUploadData" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateError">
+      <http:operation location="PDCService/updateError" />
+      <wsdl:input>
+        <mime:content part="updateError" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="updateError" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUpload">
+      <http:operation location="PDCService/deleteUpload" />
+      <wsdl:input>
+        <mime:content part="deleteUpload" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="deleteUpload" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadSingleEntry">
+      <http:operation location="PDCService/uploadSingleEntry" />
+      <wsdl:input>
+        <mime:content part="uploadSingleEntry" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="uploadSingleEntry" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadTable">
+      <http:operation location="PDCService/uploadTable" />
+      <wsdl:input>
+        <mime:content part="uploadTable" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="uploadTable" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkUploadDataExists">
+      <http:operation location="PDCService/checkUploadDataExists" />
+      <wsdl:input>
+        <mime:content part="checkUploadDataExists" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="checkUploadDataExists" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUpload">
+      <http:operation location="PDCService/updateUpload" />
+      <wsdl:input>
+        <mime:content part="updateUpload" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="updateUpload" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnWeightAndStructure">
+      <http:operation location="PDCService/returnWeightAndStructure" />
+      <wsdl:input>
+        <mime:content part="returnWeightAndStructure" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="returnWeightAndStructure" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PDCServiceSOAP12Binding" type="ns0:PDCServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findTestdefinition">
+      <soap12:operation soapAction="urn:findTestdefinition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkCompoundName">
+      <soap12:operation soapAction="urn:checkCompoundName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeErrors">
+      <soap12:operation soapAction="urn:removeErrors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateData">
+      <soap12:operation soapAction="urn:validateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listPreparationNumbers">
+      <soap12:operation soapAction="urn:listPreparationNumbers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createErrorOrMessage">
+      <soap12:operation soapAction="urn:createErrorOrMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="calculateDMSOAmount">
+      <soap12:operation soapAction="urn:calculateDMSOAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="executeNamedOperation">
+      <soap12:operation soapAction="urn:executeNamedOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listProjects">
+      <soap12:operation soapAction="urn:listProjects" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveErrors">
+      <soap12:operation soapAction="urn:retrieveErrors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findUploadData">
+      <soap12:operation soapAction="urn:findUploadData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateError">
+      <soap12:operation soapAction="urn:updateError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUpload">
+      <soap12:operation soapAction="urn:deleteUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="uploadSingleEntry">
+      <soap12:operation soapAction="urn:uploadSingleEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="uploadTable">
+      <soap12:operation soapAction="urn:uploadTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkUploadDataExists">
+      <soap12:operation soapAction="urn:checkUploadDataExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateUpload">
+      <soap12:operation soapAction="urn:updateUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="returnWeightAndStructure">
+      <soap12:operation soapAction="urn:returnWeightAndStructure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PDCException">
+        <soap12:fault use="literal" name="PDCException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PDCService">
+    <wsdl:port name="PDCServiceSOAP12port_http" binding="ns0:PDCServiceSOAP12Binding">
+      <soap12:address location="http://10.122.118.36:8080/PDCService/services/PDCService" />
+    </wsdl:port>
+    <wsdl:port name="PDCServiceHttpport" binding="ns0:PDCServiceHttpBinding">
+      <http:address location="http://10.122.118.36:8080/PDCService/services/PDCService" />
+    </wsdl:port>
+    <wsdl:port name="PDCServiceSOAP11port_http" binding="ns0:PDCServiceSOAP11Binding">
+      <soap:address location="http://10.122.118.36:8080/PDCService/services/PDCService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

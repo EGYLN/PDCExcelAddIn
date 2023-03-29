@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <section name="BBS.ST.BHC.BSP.PDC.Lib.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+            <section name="PDCLib.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+        </sectionGroup>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <section name="BBS.ST.BHC.BSP.PDC.Lib.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false"/>
+        </sectionGroup>
+    </configSections>
+    <applicationSettings>
+        <BBS.ST.BHC.BSP.PDC.Lib.Properties.Settings>
+            <setting name="LDAPServer" serializeAs="String">
+                <value>QA-AD-LDAP.bayer-ag.com</value>
+            </setting>
+            <setting name="LDAP_OU_PEOPLE" serializeAs="String">
+                <value>OU=people,O=bayer</value>
+            </setting>
+            <setting name="LDAP_PDC_USER_GROUP" serializeAs="String">
+                <value>CN=DE.BLN.PDC_User,OU=groups,O=bayer</value>
+            </setting>
+            <setting name="LDAP_PDC_ADMIN_GROUP" serializeAs="String">
+                <value>CN=DE.BLN.PDC_ADMIN,OU=groups,O=bayer</value>
+            </setting>
+            <setting name="LDAP_PDC_CURATOR_GROUP" serializeAs="String">
+                <value>CN=DE.BLN.PDC_CURATOR,OU=groups,O=bayer</value>
+            </setting>
+            <setting name="LDAP_PDC_DATAPROVIDER_GROUP" serializeAs="String">
+                <value>CN=DE.BLN.PDC_DP,OU=groups,O=bayer</value>
+            </setting>
+            <setting name="LDAP_PDC_AUTHOR_GROUP" serializeAs="String">
+                <value>CN=DE.BLN.PDC_TD_AUTHOR,OU=groups,O=bayer</value>
+            </setting>
+            <setting name="VALIDATION_BINARY_DATA_MAX_SIZE" serializeAs="String">
+                <value>512</value>
+            </setting>
+            <setting name="VALIDATION_BINARY_DATA_FORMATS" serializeAs="Xml">
+                <value>
+                    <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <string>PDF</string>
+                        <string>PNG</string>
+                        <string>GIF</string>
+                        <string>JPG</string>
+                    </ArrayOfString>
+                </value>
+            </setting>
+            <setting name="WsCustomerManagement_PDCUser" serializeAs="String">
+                <value>PDC</value>
+            </setting>
+            <setting name="WsCustomerManagement_License" serializeAs="String">
+                <value>Tb8WpNTjf7uFtIHtVnMnZixEw0KFCTimJhzI5zctC/RNc6LuAhu3CLm5EbcyM4agBs9rGh0Bzm3zooiCMTE165TA+KE3SG+a</value>
+            </setting>
+            <setting name="UsePHUser" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="ROLE_PDC_USER" serializeAs="String">
+                <value>PDC_USER</value>
+            </setting>
+            <setting name="ROLE_PDC_ADMIN" serializeAs="String">
+                <value>PDC_ADMIN</value>
+            </setting>
+            <setting name="ROLE_PDC_CURATOR" serializeAs="String">
+                <value>PDC_CURATOR</value>
+            </setting>
+            <setting name="ROLE_PDC_DATAPROVIDER" serializeAs="String">
+                <value>PDC_DP</value>
+            </setting>
+            <setting name="ROLE_PDC_AUTHOR" serializeAs="String">
+                <value>PDC_TD_AUTHOR</value>
+            </setting>
+            <setting name="DebugLogin" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="ROLE_PDC_USER_ICB" serializeAs="String">
+                <value>PDC_USER_ICB</value>
+            </setting>
+            <setting name="WsCustomerManagement_URL" serializeAs="String">
+                <value>https://phuser.intranet.cnb/wscustomermanagement_server/services/WsCustomerManagement</value>
+            </setting>
+        </BBS.ST.BHC.BSP.PDC.Lib.Properties.Settings>
+        <PDCLib.Properties.Settings>
+            <setting name="PDCLib_pdcWS_PDCService" serializeAs="String">
+                <value>http://bla.gebit.de</value>
+            </setting>
+            <setting name="PDCLib_UsermanagementWS_WsCustomerManagementService" serializeAs="String">
+                <!--<value>https://bhc-ws-usermanagement.bayer-ag.com:9443/wscustomermanagement_server/services/WsCustomerManagement</value>-->
+              <value>https://phuser.intranet.cnb/wscustomermanagement_server/services/WsCustomerManagement</value>
+            </setting>
+        </PDCLib.Properties.Settings>
+    </applicationSettings>
+    <userSettings>
+        <BBS.ST.BHC.BSP.PDC.Lib.Properties.Settings>
+            <setting name="PDC_Server" serializeAs="String">
+                <value>https://by-pdc-dev.bayer-ag.com/pdc</value>
+            </setting>
+            <setting name="PDCLib_pdcWS_PDCService" serializeAs="String">
+                <value>http://10.122.118.36:8080/PDCService/services/PDCService</value>
+            </setting>
+            <setting name="Limit_ExperimentNoSearch" serializeAs="String">
+                <value>500</value>
+            </setting>
+        </BBS.ST.BHC.BSP.PDC.Lib.Properties.Settings>
+    </userSettings>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>

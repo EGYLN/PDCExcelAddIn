@@ -1,0 +1,57 @@
+// Simple CPK mapping example.
+// Anything after the standard C //-style comment is ignored.
+// Empty lines are ignored.
+
+// Note that functional groups "hiding" under atomic aliases could be 
+// mapped as well, for example
+// NH2 brown
+
+// direct color names are welcome (albeit choices are limited)
+C=darkgray
+
+// key and value could be separated by an equal symbol '='
+O=240,0,0
+
+H=192,192,192
+//H=128,128,128
+N=63,63,255
+S=orange
+
+// example to illustrate HTML-style hex color notation
+Cl=#00CC00
+B=0,255,0
+
+P=255,165,0
+Fe=255,165,0
+Ba=255,165,0
+
+// the names are case-insensitive
+sd=0,0,255
+
+Mg=34,139,34
+
+Zn=165,42,42
+Cu=165,42,42
+Ni=165,42,42
+Br=165,42,42
+
+Ca=128,128,144
+Mn=128,128,144
+Al=128,128,144
+Ti=128,128,144
+Cr=128,128,144
+Ag=128,128,144
+
+F=218,165,32
+Si=218,165,32
+Au=218,165,32
+
+I=160,32,240
+
+Li=178,34,34
+
+He=255,192,203
+
+// "Unknown" means all the atoms whose color cannot be explicitly resolved following the rules above
+Unknown=255,20,147
+

@@ -1,0 +1,86 @@
+﻿<project schemaVersion="1.6.0.7">
+    <assemblies>
+        <assembly assemblyPath=".\PDCExcelAddIn\bin\Debug\log4net.dll" xmlCommentsPath=".\PDCExcelAddIn\bin\Debug\log4net.xml" commentsOnly="False" />
+        <assembly assemblyPath=".\OpenLib\bin\Debug\OpenLib.dll" xmlCommentsPath=".\OpenLib\bin\Debug\OpenLib.XML" commentsOnly="False" />
+        <assembly assemblyPath=".\PDCExcelAddIn\bin\Debug\PDCExcelAddIn.dll" xmlCommentsPath=".\PDCExcelAddIn\bin\Debug\PDCExcelAddIn.xml" commentsOnly="False" />
+        <assembly assemblyPath=".\PDCLib\bin\Debug\PDCLib.dll" xmlCommentsPath=".\PDCLib\bin\Debug\PDCLib.XML" commentsOnly="False" />
+        <assembly assemblyPath=".\PDCExcelAddIn\bin\Debug\STBase.dll" xmlCommentsPath="" commentsOnly="False" />
+    </assemblies>
+    <namespaceSummaries>
+        <namespaceSummaryItem name="" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.Base.STException" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.Base.TempFiles" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.Base.Translation" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.BHC.BSP.PDC.ExcelClient" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.BHC.BSP.PDC.ExcelClient.Actions" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.BHC.BSP.PDC.ExcelClient.Exceptions" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.BHC.BSP.PDC.ExcelClient.Predefined" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.BHC.BSP.PDC.ExcelClient.Properties" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.BHC.BSP.PDC.Lib" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.BHC.BSP.PDC.Lib.CompoundInformationService" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.BHC.BSP.PDC.Lib.Exceptions" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.BHC.BSP.PDC.Lib.PDCWebservice" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.BHC.BSP.PDC.Lib.Properties" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.BHC.BSP.PDC.Lib.Util" isDocumented="False" />
+        <namespaceSummaryItem name="BBS.ST.BHC.BSP.PDC.Lib.WsCustomerManagement" isDocumented="False" />
+        <namespaceSummaryItem name="log4net" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.Appender" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.Config" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.Core" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.DateFormatter" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.Filter" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.Layout" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.Layout.Pattern" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.ObjectRenderer" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.Plugin" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.Repository" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.Repository.Hierarchy" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.Util" isDocumented="False" />
+        <namespaceSummaryItem name="log4net.Util.TypeConverters" isDocumented="False" />
+        <namespaceSummaryItem name="PDCOpenLibrary" isDocumented="True" />
+    </namespaceSummaries>
+    <helpAttributes>
+        <helpAttribute name="NoName" value="" />
+    </helpAttributes>
+    <ProjectSummary />
+    <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, Namespace, TypeParameter</MissingTags>
+    <VisibleItems>InheritedMembers, InheritedFrameworkMembers, Protected, SealedProtected</VisibleItems>
+    <HtmlHelp1xCompilerPath path="" />
+    <HtmlHelp2xCompilerPath path="" />
+    <OutputPath>.\Help\Openlib\</OutputPath>
+    <SandcastlePath path="" />
+    <WorkingPath path="" />
+    <CleanIntermediates>True</CleanIntermediates>
+    <KeepLogFile>True</KeepLogFile>
+    <BuildLogFile path="" />
+    <HelpFileFormat>Help1xAndHelp2x</HelpFileFormat>
+    <CppCommentsFixup>False</CppCommentsFixup>
+    <FrameworkVersion>2.0.50727</FrameworkVersion>
+    <IndentHtml>False</IndentHtml>
+    <Preliminary>True</Preliminary>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <RootNamespaceTitle />
+    <HelpTitle>A Sandcastle Documented Class Library</HelpTitle>
+    <HtmlHelpName>OpenPDCLib</HtmlHelpName>
+    <Language>en-US</Language>
+    <CopyrightHref />
+    <CopyrightText>(C) Bayer Business Services</CopyrightText>
+    <FeedbackEMailAddress />
+    <FeedbackEMailLinkText />
+    <HeaderText>Open Lib - Pharma Data Capture Client</HeaderText>
+    <FooterText />
+    <ProjectLinkType>Local</ProjectLinkType>
+    <SdkLinkType>Msdn</SdkLinkType>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <PresentationStyle>vs2005</PresentationStyle>
+    <NamingMethod>Guid</NamingMethod>
+    <SyntaxFilters>CSharp</SyntaxFilters>
+    <ShowFeedbackControl>False</ShowFeedbackControl>
+    <BinaryTOC>True</BinaryTOC>
+    <IncludeFavorites>False</IncludeFavorites>
+    <CollectionTocStyle>Hierarchical</CollectionTocStyle>
+    <IncludeStopWordList>True</IncludeStopWordList>
+    <PlugInNamespaces>ms.vsipcc+, ms.vsexpresscc+</PlugInNamespaces>
+    <HelpFileVersion>1.0.0.0</HelpFileVersion>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+</project>

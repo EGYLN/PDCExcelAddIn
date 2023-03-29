@@ -1,0 +1,37 @@
+## Prod environment
+#PDCPortalURL=https://by-pdc-prod.bayer-ag.com:8173/pdc
+#PDCServiceURL=https://by-pdc-prod.bayer-ag.com:8173/pdc/services/PDCService
+#WSCustomerManagementServiceURL=https://phuser.intranet.cnb/wscustomermanagement_server/services/WsCustomerManagement
+#WSCompoundInformationServiceURL=http://by-compound.bayer-ag.com/CompoundInformationService.asmx
+#PDCUpdateURL=https://by-pdc-prod.bayer-ag.com:8173/pdc_update_service/
+#PDCUpdateUser=pdcuser
+#PDCUpdateLicense=v9+/LCWgVwymESFXByUUUhkD0bP4q/ZZXstg5kJ9Xzk=
+
+## QA environment
+PDCPortalURL=https://by-pdc-qa.bayer-ag.com/pdc
+PDCServiceURL=https://by-pdc-qa.bayer-ag.com/pdc/services/PDCService
+WSCustomerManagementServiceURL=https://phuserqa.intranet.cnb/wscustomermanagement_server/services/WsCustomerManagement
+WSCompoundInformationServiceURL=http://by-compound-qa.bayer-ag.com/CompoundInformationService.asmx
+PDCUpdateURL=https://by-pdc-qa.bayer-ag.com:8173/pdc_update_service/
+PDCUpdateUser=pdcuser
+PDCUpdateLicense=9ez0yozA3Rf7m/k4f7KWAo9BscRxQyftYUMSxN3DRH0=
+
+## DEV environment
+#PDCPortalURL=https://by-pdc-dev.bayer-ag.com:8173/pdc
+#PDCServiceURL=https://by-pdc-dev.bayer-ag.com:8173/pdc/services/PDCService
+#WSCustomerManagementServiceURL=https://phuserqa.intranet.cnb/wscustomermanagement_server/services/WsCustomerManagement
+#WSCompoundInformationServiceURL=http://by-compound-dev.bayer-ag.com/CompoundInformationService.asmx
+#PDCUpdateURL=https://by-pdc-dev.bayer-ag.com:8173/pdc_update_service/
+#PDCUpdateUser=pdcuser
+#PDCUpdateLicense=jCk0Iscp2/asEMyhoRua6Joq2Smn80oCHLx/lgYHqec=
+
+# Draws a border around the data entry area
+DrawDataEntryBorder=false
+# sets language of menu
+Language=german
+#Language=english
+#Menu Shortcut and text for retrieve measurement level data (SMT), Shortcut must be in Excel format
+RetrieveMeasurementsShortcut=^d
+RetrieveMeasurementsShortcutText=CTRL-D
+#Timeout for webservice in milliseconds
+WebserviceTimeoutMillies=100000

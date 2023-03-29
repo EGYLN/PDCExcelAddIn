@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BBS.ST.BHC.BSP.PDC.ExcelClient.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="useExcelList" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="debugNamedRanges" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="useGroups" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DebugLogin" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ImageServletPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/BinaryService</Value>
+    </Setting>
+    <Setting Name="MolfileServletPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/MolFileService</Value>
+    </Setting>
+    <Setting Name="URL_Documenation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://en-awiki.bayer-ag.com/PDC</Value>
+    </Setting>
+    <Setting Name="URL_Support" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://itserviceportal.intranet.cnb/spo/faces/bay/call/create?CONTEXT=BHC&amp;CATEGORY=APPLICATIONS&amp;PROCESS=RESEARCH%20IT%20SYSTEMS&amp;SYSTEM=PDC</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

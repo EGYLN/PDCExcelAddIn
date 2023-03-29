@@ -1,0 +1,7 @@
+Hallo Sven,
+
+hier schreiben wir Dir ein paar Fragen auf, auf die Du Dich, wenn Du Zeit hast, schon mal im Vorfeld vorbereiten kannst.
+
+- Warum ist der PredefinedParameterHandler nicht als Interface implementiert?
+- Warum werden die Rectangles benutzt? (COM vs native Zugriffsart? Einfacherer Zugriff auf Grenzen (rectangle vs. ranges)?)
+

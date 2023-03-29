@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns3="http://lang.java" xmlns:tns1="http://beans.service.customermanagement.ws.bayer.com" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns2="http://exception.near.bayer.com" xmlns:impl="http://by-ws-ics-customermanagement/ws_customermanagement" xmlns:intf="http://by-ws-ics-customermanagement/ws_customermanagement" targetNamespace="http://by-ws-ics-customermanagement/ws_customermanagement" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://beans.service.customermanagement.ws.bayer.com">
+      <xsd:import namespace="http://lang.java" />
+      <xsd:import namespace="http://exception.near.bayer.com" />
+      <xsd:import namespace="http://by-ws-ics-customermanagement/ws_customermanagement" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="Principal">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="CustomerCostcenter">
+        <xsd:sequence>
+          <xsd:element name="applicationName" nillable="true" type="xsd:string" />
+          <xsd:element name="changeable" nillable="true" type="xsd:string" />
+          <xsd:element name="remark" nillable="true" type="xsd:string" />
+          <xsd:element name="sapObject" nillable="true" type="xsd:string" />
+          <xsd:element name="sapType" nillable="true" type="xsd:string" />
+          <xsd:element name="status" nillable="true" type="xsd:string" />
+          <xsd:element name="type" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerProperty">
+        <xsd:sequence>
+          <xsd:element name="applicationName" nillable="true" type="xsd:string" />
+          <xsd:element name="name" nillable="true" type="xsd:string" />
+          <xsd:element name="size" nillable="true" type="xsd:string" />
+          <xsd:element name="type" nillable="true" type="xsd:string" />
+          <xsd:element name="value" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RoleProperty">
+        <xsd:sequence>
+          <xsd:element name="applicationName" nillable="true" type="xsd:string" />
+          <xsd:element name="name" nillable="true" type="xsd:string" />
+          <xsd:element name="size" nillable="true" type="xsd:string" />
+          <xsd:element name="type" nillable="true" type="xsd:string" />
+          <xsd:element name="value" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerRole">
+        <xsd:sequence>
+          <xsd:element name="applicationName" nillable="true" type="xsd:string" />
+          <xsd:element name="descr" nillable="true" type="xsd:string" />
+          <xsd:element name="name" nillable="true" type="xsd:string" />
+          <xsd:element name="properties" nillable="true" type="intf:ArrayOf_tns1_RoleProperty" />
+          <xsd:element name="status" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Customer">
+        <xsd:sequence>
+          <xsd:element name="administration" nillable="true" type="xsd:string" />
+          <xsd:element name="building" nillable="true" type="xsd:string" />
+          <xsd:element name="city" nillable="true" type="xsd:string" />
+          <xsd:element name="code" nillable="true" type="xsd:string" />
+          <xsd:element name="company" nillable="true" type="xsd:string" />
+          <xsd:element name="costcenters" nillable="true" type="intf:ArrayOf_tns1_CustomerCostcenter" />
+          <xsd:element name="country" nillable="true" type="xsd:string" />
+          <xsd:element name="cwid" nillable="true" type="xsd:string" />
+          <xsd:element name="department" nillable="true" type="xsd:string" />
+          <xsd:element name="division" nillable="true" type="xsd:string" />
+          <xsd:element name="email" nillable="true" type="xsd:string" />
+          <xsd:element name="executive" nillable="true" type="xsd:string" />
+          <xsd:element name="fax" nillable="true" type="xsd:string" />
+          <xsd:element name="firstname" nillable="true" type="xsd:string" />
+          <xsd:element name="id" type="xsd:long" />
+          <xsd:element name="lastUpdate" nillable="true" type="xsd:string" />
+          <xsd:element name="lastname" nillable="true" type="xsd:string" />
+          <xsd:element name="notesEmail" nillable="true" type="xsd:string" />
+          <xsd:element name="oldCustomerId" nillable="true" type="xsd:string" />
+          <xsd:element name="personalId" type="xsd:long" />
+          <xsd:element name="phone" nillable="true" type="xsd:string" />
+          <xsd:element name="position" nillable="true" type="xsd:string" />
+          <xsd:element name="positionDesc" nillable="true" type="xsd:string" />
+          <xsd:element name="postOfficeBox" nillable="true" type="xsd:string" />
+          <xsd:element name="principals" nillable="true" type="intf:ArrayOf_tns1_Principal" />
+          <xsd:element name="properties" nillable="true" type="intf:ArrayOf_tns1_CustomerProperty" />
+          <xsd:element name="registrationDate" nillable="true" type="xsd:string" />
+          <xsd:element name="remark" nillable="true" type="xsd:string" />
+          <xsd:element name="roles" nillable="true" type="intf:ArrayOf_tns1_CustomerRole" />
+          <xsd:element name="salutation" nillable="true" type="xsd:string" />
+          <xsd:element name="site" nillable="true" type="xsd:string" />
+          <xsd:element name="street" nillable="true" type="xsd:string" />
+          <xsd:element name="title" nillable="true" type="xsd:string" />
+          <xsd:element name="workingStatus" nillable="true" type="xsd:string" />
+          <xsd:element name="zipCode" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="LDAPCustomer">
+        <xsd:sequence>
+          <xsd:element name="building" nillable="true" type="xsd:string" />
+          <xsd:element name="city" nillable="true" type="xsd:string" />
+          <xsd:element name="company" nillable="true" type="xsd:string" />
+          <xsd:element name="country" nillable="true" type="xsd:string" />
+          <xsd:element name="cwid" nillable="true" type="xsd:string" />
+          <xsd:element name="department" nillable="true" type="xsd:string" />
+          <xsd:element name="division" nillable="true" type="xsd:string" />
+          <xsd:element name="email" nillable="true" type="xsd:string" />
+          <xsd:element name="executive" nillable="true" type="xsd:string" />
+          <xsd:element name="fax" nillable="true" type="xsd:string" />
+          <xsd:element name="firstname" nillable="true" type="xsd:string" />
+          <xsd:element name="lastname" nillable="true" type="xsd:string" />
+          <xsd:element name="personalId" nillable="true" type="xsd:string" />
+          <xsd:element name="phone" nillable="true" type="xsd:string" />
+          <xsd:element name="position" nillable="true" type="xsd:string" />
+          <xsd:element name="salutation" nillable="true" type="xsd:string" />
+          <xsd:element name="site" nillable="true" type="xsd:string" />
+          <xsd:element name="street" nillable="true" type="xsd:string" />
+          <xsd:element name="title" nillable="true" type="xsd:string" />
+          <xsd:element name="zipCode" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HRData">
+        <xsd:sequence>
+          <xsd:element name="address" nillable="true" type="xsd:string" />
+          <xsd:element name="birthname" nillable="true" type="xsd:string" />
+          <xsd:element name="companycodeNr" nillable="true" type="xsd:string" />
+          <xsd:element name="companycodeTxt" nillable="true" type="xsd:string" />
+          <xsd:element name="controllingareaNr" nillable="true" type="xsd:string" />
+          <xsd:element name="controllingareaTxt" nillable="true" type="xsd:string" />
+          <xsd:element name="costcenter" nillable="true" type="xsd:string" />
+          <xsd:element name="costcenterLong" nillable="true" type="xsd:string" />
+          <xsd:element name="cwid" nillable="true" type="xsd:string" />
+          <xsd:element name="departmentNr" nillable="true" type="xsd:string" />
+          <xsd:element name="departmentTxt" nillable="true" type="xsd:string" />
+          <xsd:element name="division" nillable="true" type="xsd:string" />
+          <xsd:element name="email" nillable="true" type="xsd:string" />
+          <xsd:element name="firstname" nillable="true" type="xsd:string" />
+          <xsd:element name="namePrefix" nillable="true" type="xsd:string" />
+          <xsd:element name="nameSuffix" nillable="true" type="xsd:string" />
+          <xsd:element name="orgUnitLong" nillable="true" type="xsd:string" />
+          <xsd:element name="orgUnitShort" nillable="true" type="xsd:string" />
+          <xsd:element name="personalId" nillable="true" type="xsd:string" />
+          <xsd:element name="personalIdOther" nillable="true" type="xsd:string" />
+          <xsd:element name="room" nillable="true" type="xsd:string" />
+          <xsd:element name="salutation" nillable="true" type="xsd:string" />
+          <xsd:element name="sapSite" nillable="true" type="xsd:string" />
+          <xsd:element name="statusCustomerNr" nillable="true" type="xsd:string" />
+          <xsd:element name="statusCustomerTxt" nillable="true" type="xsd:string" />
+          <xsd:element name="statusEmploymentNr" nillable="true" type="xsd:string" />
+          <xsd:element name="statusEmploymentTxt" nillable="true" type="xsd:string" />
+          <xsd:element name="subdepartmentNr" nillable="true" type="xsd:string" />
+          <xsd:element name="subdepartmentTxt" nillable="true" type="xsd:string" />
+          <xsd:element name="surename" nillable="true" type="xsd:string" />
+          <xsd:element name="telefax" nillable="true" type="xsd:string" />
+          <xsd:element name="telephone" nillable="true" type="xsd:string" />
+          <xsd:element name="title" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://by-ws-ics-customermanagement/ws_customermanagement">
+      <xsd:import namespace="http://lang.java" />
+      <xsd:import namespace="http://beans.service.customermanagement.ws.bayer.com" />
+      <xsd:import namespace="http://exception.near.bayer.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOf_tns1_Principal">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:Principal[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_xsd_string">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:string[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_CustomerCostcenter">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:CustomerCostcenter[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_CustomerProperty">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:CustomerProperty[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_RoleProperty">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:RoleProperty[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_CustomerRole">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:CustomerRole[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_Customer">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:Customer[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://exception.near.bayer.com">
+      <xsd:import namespace="http://lang.java" />
+      <xsd:import namespace="http://beans.service.customermanagement.ws.bayer.com" />
+      <xsd:import namespace="http://by-ws-ics-customermanagement/ws_customermanagement" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="RemoteNearException">
+        <xsd:sequence>
+          <xsd:element name="cause" nillable="true" type="xsd:anyType" />
+          <xsd:element name="completeMessage" nillable="true" type="xsd:string" />
+          <xsd:element name="exceptionClassName" nillable="true" type="xsd:string" />
+          <xsd:element name="message" nillable="true" type="xsd:string" />
+          <xsd:element name="messageCode" nillable="true" type="xsd:string" />
+          <xsd:element name="messageText" nillable="true" type="xsd:string" />
+          <xsd:element name="originatorClassName" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="addRoleRequest">
+    <wsdl:part name="in0" type="tns1:Customer" />
+    <wsdl:part name="in1" type="tns1:CustomerRole" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerInfoRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="searchCustomersRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerInfoLDAPResponse">
+    <wsdl:part name="getCustomerInfoLDAPReturn" type="tns1:LDAPCustomer" />
+  </wsdl:message>
+  <wsdl:message name="searchCustomersResponse">
+    <wsdl:part name="searchCustomersReturn" type="intf:ArrayOf_tns1_Customer" />
+  </wsdl:message>
+  <wsdl:message name="getAuthorizationResponse">
+    <wsdl:part name="getAuthorizationReturn" type="tns1:Customer" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getAuthorizationRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="xsd:string" />
+    <wsdl:part name="in2" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="createCustomerRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationResponse">
+    <wsdl:part name="getAuthenticationReturn" type="intf:ArrayOf_tns1_Principal" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerInfoResponse">
+    <wsdl:part name="getCustomerInfoReturn" type="tns1:Customer" />
+  </wsdl:message>
+  <wsdl:message name="updatePropertiesRequest">
+    <wsdl:part name="in0" type="tns1:Customer" />
+    <wsdl:part name="in1" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="updateRolePropertiesResponse">
+    <wsdl:part name="updateRolePropertiesReturn" type="tns1:CustomerRole" />
+  </wsdl:message>
+  <wsdl:message name="addRoleResponse" />
+  <wsdl:message name="getHRDataResponse">
+    <wsdl:part name="getHRDataReturn" type="tns1:HRData" />
+  </wsdl:message>
+  <wsdl:message name="updateRolePropertiesRequest">
+    <wsdl:part name="in0" type="tns1:CustomerRole" />
+    <wsdl:part name="in1" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="updatePropertiesResponse">
+    <wsdl:part name="updatePropertiesReturn" type="tns1:Customer" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerInfoLDAPRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getVersionRequest" />
+  <wsdl:message name="RemoteNearException">
+    <wsdl:part name="fault" type="tns2:RemoteNearException" />
+  </wsdl:message>
+  <wsdl:message name="createCustomerResponse">
+    <wsdl:part name="createCustomerReturn" type="tns1:Customer" />
+  </wsdl:message>
+  <wsdl:message name="getHRDataRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getVersionResponse">
+    <wsdl:part name="getVersionReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="WsCustomerManagement">
+    <wsdl:operation name="getVersion">
+      <wsdl:input name="getVersionRequest" message="intf:getVersionRequest" />
+      <wsdl:output name="getVersionResponse" message="intf:getVersionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAuthentication" parameterOrder="in0 in1">
+      <wsdl:input name="getAuthenticationRequest" message="intf:getAuthenticationRequest" />
+      <wsdl:output name="getAuthenticationResponse" message="intf:getAuthenticationResponse" />
+      <wsdl:fault name="RemoteNearException" message="intf:RemoteNearException" />
+    </wsdl:operation>
+    <wsdl:operation name="getAuthorization" parameterOrder="in0 in1 in2">
+      <wsdl:input name="getAuthorizationRequest" message="intf:getAuthorizationRequest" />
+      <wsdl:output name="getAuthorizationResponse" message="intf:getAuthorizationResponse" />
+      <wsdl:fault name="RemoteNearException" message="intf:RemoteNearException" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerInfo" parameterOrder="in0 in1">
+      <wsdl:input name="getCustomerInfoRequest" message="intf:getCustomerInfoRequest" />
+      <wsdl:output name="getCustomerInfoResponse" message="intf:getCustomerInfoResponse" />
+      <wsdl:fault name="RemoteNearException" message="intf:RemoteNearException" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerInfoLDAP" parameterOrder="in0">
+      <wsdl:input name="getCustomerInfoLDAPRequest" message="intf:getCustomerInfoLDAPRequest" />
+      <wsdl:output name="getCustomerInfoLDAPResponse" message="intf:getCustomerInfoLDAPResponse" />
+      <wsdl:fault name="RemoteNearException" message="intf:RemoteNearException" />
+    </wsdl:operation>
+    <wsdl:operation name="updateProperties" parameterOrder="in0 in1">
+      <wsdl:input name="updatePropertiesRequest" message="intf:updatePropertiesRequest" />
+      <wsdl:output name="updatePropertiesResponse" message="intf:updatePropertiesResponse" />
+      <wsdl:fault name="RemoteNearException" message="intf:RemoteNearException" />
+    </wsdl:operation>
+    <wsdl:operation name="updateRoleProperties" parameterOrder="in0 in1">
+      <wsdl:input name="updateRolePropertiesRequest" message="intf:updateRolePropertiesRequest" />
+      <wsdl:output name="updateRolePropertiesResponse" message="intf:updateRolePropertiesResponse" />
+      <wsdl:fault name="RemoteNearException" message="intf:RemoteNearException" />
+    </wsdl:operation>
+    <wsdl:operation name="getHRData" parameterOrder="in0">
+      <wsdl:input name="getHRDataRequest" message="intf:getHRDataRequest" />
+      <wsdl:output name="getHRDataResponse" message="intf:getHRDataResponse" />
+      <wsdl:fault name="RemoteNearException" message="intf:RemoteNearException" />
+    </wsdl:operation>
+    <wsdl:operation name="searchCustomers" parameterOrder="in0 in1">
+      <wsdl:input name="searchCustomersRequest" message="intf:searchCustomersRequest" />
+      <wsdl:output name="searchCustomersResponse" message="intf:searchCustomersResponse" />
+      <wsdl:fault name="RemoteNearException" message="intf:RemoteNearException" />
+    </wsdl:operation>
+    <wsdl:operation name="createCustomer" parameterOrder="in0">
+      <wsdl:input name="createCustomerRequest" message="intf:createCustomerRequest" />
+      <wsdl:output name="createCustomerResponse" message="intf:createCustomerResponse" />
+      <wsdl:fault name="RemoteNearException" message="intf:RemoteNearException" />
+    </wsdl:operation>
+    <wsdl:operation name="addRole" parameterOrder="in0 in1">
+      <wsdl:input name="addRoleRequest" message="intf:addRoleRequest" />
+      <wsdl:output name="addRoleResponse" message="intf:addRoleResponse" />
+      <wsdl:fault name="RemoteNearException" message="intf:RemoteNearException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsCustomerManagementSoapBinding" type="intf:WsCustomerManagement">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getVersion">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getVersionRequest">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getVersionResponse">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthentication">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAuthenticationRequest">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getAuthenticationResponse">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="RemoteNearException">
+        <wsdlsoap:fault use="encoded" name="RemoteNearException" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthorization">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAuthorizationRequest">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getAuthorizationResponse">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="RemoteNearException">
+        <wsdlsoap:fault use="encoded" name="RemoteNearException" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCustomerInfoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getCustomerInfoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="RemoteNearException">
+        <wsdlsoap:fault use="encoded" name="RemoteNearException" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerInfoLDAP">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCustomerInfoLDAPRequest">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getCustomerInfoLDAPResponse">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="RemoteNearException">
+        <wsdlsoap:fault use="encoded" name="RemoteNearException" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateProperties">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updatePropertiesRequest">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updatePropertiesResponse">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="RemoteNearException">
+        <wsdlsoap:fault use="encoded" name="RemoteNearException" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateRoleProperties">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateRolePropertiesRequest">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updateRolePropertiesResponse">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="RemoteNearException">
+        <wsdlsoap:fault use="encoded" name="RemoteNearException" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getHRData">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getHRDataRequest">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getHRDataResponse">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="RemoteNearException">
+        <wsdlsoap:fault use="encoded" name="RemoteNearException" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="searchCustomers">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchCustomersRequest">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="searchCustomersResponse">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="RemoteNearException">
+        <wsdlsoap:fault use="encoded" name="RemoteNearException" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCustomer">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createCustomerRequest">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="createCustomerResponse">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="RemoteNearException">
+        <wsdlsoap:fault use="encoded" name="RemoteNearException" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addRole">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="addRoleRequest">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="addRoleResponse">
+        <wsdlsoap:body use="encoded" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="RemoteNearException">
+        <wsdlsoap:fault use="encoded" name="RemoteNearException" namespace="http://by-ws-ics-customermanagement/ws_customermanagement" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsCustomerManagementService">
+    <wsdl:port name="WsCustomerManagement" binding="intf:WsCustomerManagementSoapBinding">
+      <!--<wsdlsoap:address location="https://bhc-ws-usermanagement.bayer-ag.com:9443/wscustomermanagement_server/services/WsCustomerManagement" />-->
+      <wsdlsoap:address location="https://phuser.intranet.cnb/wscustomermanagement_server/services/WsCustomerManagement" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

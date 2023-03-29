@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="PDCExcelAddIn.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false"/>
+    </sectionGroup>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="BBS.ST.BHC.BSP.PDC.ExcelClient.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+      <section name="PDCExcelAddIn.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+    </sectionGroup>
+  </configSections>
+  <userSettings>
+    <PDCExcelAddIn.Properties.Settings>
+      <setting name="index" serializeAs="String">
+        <value>0</value>
+      </setting>
+    </PDCExcelAddIn.Properties.Settings>
+  </userSettings>
+  <applicationSettings>
+    <BBS.ST.BHC.BSP.PDC.ExcelClient.Properties.Settings>
+      <setting name="useExcelList" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="debugNamedRanges" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="useGroups" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="DebugLogin" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="ImageServletPath" serializeAs="String">
+        <value>/BinaryService</value>
+      </setting>
+      <setting name="MolfileServletPath" serializeAs="String">
+        <value>/MolFileService</value>
+      </setting>
+      <setting name="URL_Documenation" serializeAs="String">
+        <value>http://en-awiki.bayer-ag.com/PDC</value>
+      </setting>
+      <setting name="URL_Support" serializeAs="String">
+        <value>https://itserviceportal.intranet.cnb/spo/faces/bay/call/create?CONTEXT=BHC&amp;CATEGORY=APPLICATIONS&amp;PROCESS=RESEARCH%20IT%20SYSTEMS&amp;SYSTEM=PDC</value>
+      </setting>
+    </BBS.ST.BHC.BSP.PDC.ExcelClient.Properties.Settings>
+    <PDCExcelAddIn.Properties.Settings>
+      <setting name="useExcelList" serializeAs="String">
+        <value>True</value>
+      </setting>
+    </PDCExcelAddIn.Properties.Settings>
+  </applicationSettings>
+  <appSettings>
+    <add key="SendKeys" value="SendInput"/>
+    <add key="ClientSettingsProvider.ServiceUri" value=""/>
+    <add key="ClientSettingsProvider.ConnectionStringName" value="DefaultConnection"/>
+  </appSettings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8"/>
+  </startup>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" connectionStringName="DefaultConnection" credentialsProvider=""/>
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" connectionStringName="DefaultConnection"/>
+      </providers>
+    </roleManager>
+  </system.web>
+  <connectionStrings>
+    <add name="DefaultConnection" connectionString="Data Source = |SQL/CE|"/>
+  </connectionStrings>
+</configuration>

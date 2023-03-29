@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <!--<DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://bhc-ws-usermanagement.bayer-ag.com:9443/wscustomermanagement_server/services/WsCustomerManagement?wsdl" filename="WsCustomerManagement.wsdl" />-->
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://phuser.intranet.cnb/wscustomermanagement_server/services/WsCustomerManagement?wsdl" filename="WsCustomerManagement.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,74 @@
+﻿############################################################
+#                   Update Info
+############################################################
+
+# Name of the application which should be updated
+ApplicationName:PDC Client
+
+# The "main" assembly of the application that will be used for determining the version.
+# If it is an executable, it can also be used to restart the application.
+# required
+ApplicationFile:PDCVersion.dll
+
+# The parameter to deliver to the application that is defined in "ApplicationFile"
+# Optional
+#ApplicationStartParameter: /go
+
+# The Assembly of the AutoUpdater
+# This Assembly (dll) will be loaded by the application that starts the autoupdate (AutoUpdater.exe
+# or any other application). This dll contains the updater class that implements IUpdater.
+# required
+AutoUpdaterAssembly:PdcUpdater.dll
+
+
+
+############################################################
+#                   Update Source
+############################################################
+
+# Generell
+##############################
+
+# The Application identifier to use for getting the update information
+# required
+ApplicationID:PDC_DE
+
+# The type of the update source to use.
+# Provided types: UNC, WebService, DataBase
+# Depending on the type, one of the sections below must be filled
+# required
+UpdateSourceType:UNC
+
+
+# UNC
+##############################
+
+# The Adress to use by the UncUpdateSource for getting the update
+# required if an UNC Updatesource is used.
+UncUpdateSource: \\bykol1\ezjziShare\My Projects\PDC\UpdateSource
+
+
+
+# webService
+##############################
+
+# The adress of the webserver to use
+# required if an Webserver update source is used. Username and password are optional.
+# $AppId: Placeholder for the application ID.
+# $File:  Placeholder for the file to download (update.zip, info.xml, ...)
+#WebServiceUpdateSource: http://by-ritdev2.bayer-ag.com:60380/gadget_service/update/
+#UserName: testuser
+#Password: rUqc70RGX62XjKo38u2s0+znK0VbUDgFkXxyA/GyWds=
+
+
+
+# DataBase
+##############################
+
+# The adress of the webserver to use
+# required if an DataBase update source is used.
+# DataSource:myDataBase
+# UserName:
+# Passwort:
+
+

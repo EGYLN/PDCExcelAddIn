@@ -1,0 +1,14 @@
+<autoupdater_instructions>
+  <autoupdater_file>AutoUpdater.exe</autoupdater_file>
+  <autoupdater_file>AppUpdaterContracts.dll</autoupdater_file>
+  <autoupdater_file>AppUpdater.dll</autoupdater_file>
+  <autoupdater_file>PdcUpdater.dll</autoupdater_file>
+  <autoupdater_file>log4net.dll</autoupdater_file>
+  <autoupdater_file>ICSharpCode.SharpZipLib.dll</autoupdater_file>
+  <autoupdater_file>AutoUpdater.Settings.ini</autoupdater_file>
+  <autoupdater_file>pdcconfig.properties</autoupdater_file>
+  <dont_delete_file>Install.log</dont_delete_file>
+  <dont_delete_file>pdc-log.txt</dont_delete_file>
+  <dont_delete_file>PdcInitial.zip</dont_delete_file>
+</autoupdater_instructions>
+

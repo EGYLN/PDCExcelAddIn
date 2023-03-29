@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Action_AdvancedCompoundInfo_Caption" xml:space="preserve">
+    <value>&amp;Retrieve Chemical Data</value>
+    <comment>PDC Menu</comment>
+  </data>
+  <data name="Action_CI_Format_BAY" xml:space="preserve">
+    <value>Format as &amp;BAY-No.</value>
+  </data>
+  <data name="Action_CI_Format_Caption" xml:space="preserve">
+    <value>&amp;Verify Compound List</value>
+  </data>
+  <data name="Action_CI_Format_COP" xml:space="preserve">
+    <value>Format as CO&amp;P-No.</value>
+  </data>
+  <data name="Action_CI_Format_COS" xml:space="preserve">
+    <value>Format as &amp;COS-No.</value>
+  </data>
+  <data name="Action_CI_Format_ZK" xml:space="preserve">
+    <value>Format as &amp;ZK-No.</value>
+  </data>
+  <data name="Action_CI_Formula_Caption" xml:space="preserve">
+    <value>Retrieve &amp;Formula</value>
+  </data>
+  <data name="Action_CI_Structure_Caption" xml:space="preserve">
+    <value>Retrieve &amp;Structure Formula</value>
+  </data>
+  <data name="Action_CI_WEIGHT_Caption" xml:space="preserve">
+    <value>Retrieve &amp;Molecular Weight</value>
+  </data>
+  <data name="Action_ClearData_Caption" xml:space="preserve">
+    <value>Clear &amp;Worksheet</value>
+    <comment>PDC Menu</comment>
+  </data>
+  <data name="Action_CompoundInfo_Caption" xml:space="preserve">
+    <value>&amp;Retrieve Chemical Data</value>
+    <comment>PDC Menu </comment>
+  </data>
+  <data name="Action_CreateWorkbook_Caption" xml:space="preserve">
+    <value>Create &amp;new PDC Worksheet</value>
+    <comment>PDC Menu</comment>
+  </data>
+  <data name="Action_Delete_Caption" xml:space="preserve">
+    <value>&amp;Delete Data from PDC Database</value>
+  </data>
+  <data name="Action_Login_Caption" xml:space="preserve">
+    <value>PDC &amp;Login</value>
+    <comment>PDC Menu</comment>
+  </data>
+  <data name="Action_Logout_Caption" xml:space="preserve">
+    <value>PDC &amp;Logout</value>
+    <comment>PDC Menu</comment>
+  </data>
+  <data name="Action_RetrieveMeasurementLevelData_Caption" xml:space="preserve">
+    <value>Retrieve &amp;measurement level data</value>
+    <comment>PDC Menu</comment>
+  </data>
+  <data name="Action_SearchTestData_Caption" xml:space="preserve">
+    <value>&amp;Search Test Data</value>
+    <comment>PDC Menu</comment>
+  </data>
+  <data name="Action_SearchTestData_Filling_Caption" xml:space="preserve">
+    <value>Filling worksheet</value>
+  </data>
+  <data name="Action_StructureFormat_Caption" xml:space="preserve">
+    <value>&amp;Structure format</value>
+    <comment>PDC Menu</comment>
+  </data>
+  <data name="Action_Update_Caption" xml:space="preserve">
+    <value>&amp;Commit Changes to PDC Database</value>
+    <comment>PDC Menu</comment>
+  </data>
+  <data name="Action_Upload_Workbook" xml:space="preserve">
+    <value>&amp;Upload Worksheet to PDC Database</value>
+    <comment>PDC Menu</comment>
+  </data>
+  <data name="Action_Validate_Caption" xml:space="preserve">
+    <value>&amp;Validate Worksheet</value>
+    <comment>PDC Menu</comment>
+  </data>
+  <data name="Action_VersionInfo_Caption" xml:space="preserve">
+    <value>&amp;Info</value>
+  </data>
+  <data name="Action_WinLogin_Caption" xml:space="preserve">
+    <value>PDC W&amp;indows Login</value>
+    <comment>PDC Menu</comment>
+  </data>
+  <data name="CI_Contextmenu_Caption" xml:space="preserve">
+    <value>PDC</value>
+  </data>
+  <data name="COL_HEADER_DATE_RESULT" xml:space="preserve">
+    <value>Test Date</value>
+  </data>
+  <data name="Header_Column" xml:space="preserve">
+    <value>Column</value>
+    <comment>Überschift für Spalten im Fehler Grid</comment>
+  </data>
+  <data name="Header_Message" xml:space="preserve">
+    <value>Message</value>
+    <comment>Überschift für Spalten im Fehler Grid</comment>
+  </data>
+  <data name="Header_Row" xml:space="preserve">
+    <value>Row</value>
+    <comment>Überschift für Spalten im Fehler Grid</comment>
+  </data>
+  <data name="Header_Severness" xml:space="preserve">
+    <value>Severness</value>
+    <comment>Überschift für Spalten im Fehler Grid</comment>
+  </data>
+  <data name="Header_Testname" xml:space="preserve">
+    <value>Testname</value>
+  </data>
+  <data name="Header_Testno" xml:space="preserve">
+    <value>Testno</value>
+  </data>
+  <data name="Header_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="LABEL_DELETE_DATA" xml:space="preserve">
+    <value>PDC: Deleting {0} rows.</value>
+  </data>
+  <data name="LABEL_LOAD_MEASUREMENTS" xml:space="preserve">
+    <value>PDC: Loading measurements for selected testdata</value>
+  </data>
+  <data name="LABEL_LOOKUP_COMPOUND_INFO" xml:space="preserve">
+    <value>PDC: Looking up the compound information</value>
+  </data>
+  <data name="LABEL_SEARCH_TESTDATA" xml:space="preserve">
+    <value>PDC: Searching for testdata</value>
+  </data>
+  <data name="LABEL_UPDATE" xml:space="preserve">
+    <value>PDC: Updating selected testdata</value>
+  </data>
+  <data name="LABEL_UPLOAD_WORKBOOK" xml:space="preserve">
+    <value>PDC: Uploading testdata</value>
+  </data>
+  <data name="LABEL_VALIDATE_WORKBOOK" xml:space="preserve">
+    <value>PDC: Validating workbook</value>
+  </data>
+  <data name="LIST_MANDATORY_DIFF_COLUMN_DELETED" xml:space="preserve">
+    <value>The column {0} is mandatory or differentiating and must not be deleted, since it has no default value.</value>
+  </data>
+  <data name="LIST_MEASUREMENT_COLUMN_DELETED" xml:space="preserve">
+    <value>The column {0} is the connection to the measurements and should not be deleted</value>
+  </data>
+  <data name="LIST_NEEDED_PDC_COLUMN_DELETED" xml:space="preserve">
+    <value>The column {0} is needed by PDC  and must not be deleted</value>
+  </data>
+  <data name="MSG_ACTION_NOT_ENABLED" xml:space="preserve">
+    <value>The action {0} is currently disabled.</value>
+  </data>
+  <data name="MSG_ACTION_NOT_FOUND" xml:space="preserve">
+    <value>Action {0} not found.</value>
+  </data>
+  <data name="MSG_AUTO_FILTER_SET_DELETE" xml:space="preserve">
+    <value>You selected hidden rows. Therefore it's not allowed to delete data. 
+
+Probably this happened as you have filtered data. 
+Unfilter the sheet and try again.</value>
+  </data>
+  <data name="MSG_CELLEDITINGMODE_TEXT" xml:space="preserve">
+    <value>Excel is in cellediting mode. Finish cellediting before executing this operation</value>
+  </data>
+  <data name="MSG_CELLEDITINGMODE_TITLE" xml:space="preserve">
+    <value>PDC: Cannot execute operation</value>
+  </data>
+  <data name="MSG_CONFIRM_DELETE_DATA" xml:space="preserve">
+    <value>Are you sure you want to delete {0} rows?</value>
+  </data>
+  <data name="MSG_CONFIRM_LOAD_MEASUREMENT_DATA" xml:space="preserve">
+    <value>Are you sure you want to load measurements for {0} rows?</value>
+  </data>
+  <data name="MSG_CONFIRM_TITLE" xml:space="preserve">
+    <value>PDC: Confirm</value>
+  </data>
+  <data name="MSG_CONFIRM_UPDATE_DATA" xml:space="preserve">
+    <value>Are you sure you want to update {0} rows?</value>
+  </data>
+  <data name="MSG_ERROR_TITLE" xml:space="preserve">
+    <value>PDC: Error</value>
+  </data>
+  <data name="MSG_HIDDEN_ROWS_SELECTED" xml:space="preserve">
+    <value>You selected hidden rows. It's not allowed to delete hidden rows.</value>
+  </data>
+  <data name="MSG_LOAD_MEASUREMENTS_TITLE" xml:space="preserve">
+    <value>PDC: Load Measurements</value>
+  </data>
+  <data name="MSG_LOGIN_TEXT" xml:space="preserve">
+    <value>PDC: Login was successful</value>
+  </data>
+  <data name="MSG_LOGIN_TITLE" xml:space="preserve">
+    <value>PDC: Login</value>
+  </data>
+  <data name="MSG_NO_CELLS_SELECTED" xml:space="preserve">
+    <value>There are no selected cells</value>
+  </data>
+  <data name="MSG_NO_DATA_TO_UPLOAD_TEXT" xml:space="preserve">
+    <value>No upload data found</value>
+  </data>
+  <data name="MSG_NO_DATA_TO_VALIDATE_TEXT" xml:space="preserve">
+    <value>No data for validation found</value>
+  </data>
+  <data name="MSG_NO_ENTRIES_FOUND_TEXT" xml:space="preserve">
+    <value>No Entries found. Change Query conditions?</value>
+  </data>
+  <data name="MSG_NO_EXPERIMENTNO_ROW" xml:space="preserve">
+    <value>The necessary experimentno row was deleted.</value>
+  </data>
+  <data name="MSG_NO_PDC_SHEET" xml:space="preserve">
+    <value>The active worksheet is not a PDC worksheet. The action {0} can not be executed.</value>
+  </data>
+  <data name="MSG_NO_SEARCH_CONDITIONS_TEXT" xml:space="preserve">
+    <value>No Search conditions selected</value>
+  </data>
+  <data name="MSG_NO_WORKSHEET_TEXT" xml:space="preserve">
+    <value>Active sheet is not a worksheet</value>
+  </data>
+  <data name="MSG_NOT_LOGGED_IN" xml:space="preserve">
+    <value>The user is not logged in. The action {0} can not be executed.</value>
+  </data>
+  <data name="MSG_PDCVERSION_FAILED" xml:space="preserve">
+    <value>PDC server and client version are not equal.</value>
+  </data>
+  <data name="MSG_PDCVERSION_TITLE" xml:space="preserve">
+    <value>PDCVersion</value>
+  </data>
+  <data name="MSG_SAVE_WORKBOOK_TEXT" xml:space="preserve">
+    <value>PDC: Do you want to save the changes you made to '{0}'?</value>
+  </data>
+  <data name="MSG_SAVE_WORKBOOK_TITLE" xml:space="preserve">
+    <value>Microsoft Excel</value>
+  </data>
+  <data name="MSG_SEARCH_TITLE" xml:space="preserve">
+    <value>PDC: Search</value>
+  </data>
+  <data name="MSG_SEARCH_RESULT_TEXT" xml:space="preserve">
+    <value>Found {0} entries. Display result?</value>
+  </data>
+  <data name="MSG_SHEET_IS_MISSING_TEXT" xml:space="preserve">
+    <value>One sheet is missing. Please create a new PDC working sheet.</value>
+  </data>
+  <data name="MSG_SHEET_IS_MISSING_TITLE" xml:space="preserve">
+    <value>PDC: Missing sheet</value>
+  </data>
+  <data name="MSG_SHEET_NAME_EXISTS_TEXT" xml:space="preserve">
+    <value>A sheet or object with the name {0} already exists (of type {1})</value>
+  </data>
+  <data name="MSG_SHEET_NAME_EXISTS_TITLE" xml:space="preserve">
+    <value>PDC: Duplicate sheet name</value>
+  </data>
+  <data name="MSG_SHEET_PROTECTED_TEXT" xml:space="preserve">
+    <value>Cannot execute operation since the sheet is protected</value>
+  </data>
+  <data name="MSG_SHEET_PROTECTED_TITLE" xml:space="preserve">
+    <value>PDC: Sheet protected</value>
+  </data>
+  <data name="MSG_TEST_ALREADY_OPEN_TEXT" xml:space="preserve">
+    <value>The test is already open</value>
+  </data>
+  <data name="MSG_TEST_ALREADY_OPEN_TITLE" xml:space="preserve">
+    <value>PDC: Test already open</value>
+  </data>
+  <data name="MSG_UPDATE_OK_TEXT" xml:space="preserve">
+    <value>Testdata updated.</value>
+  </data>
+  <data name="MSG_UPDATE_OK_TITLE" xml:space="preserve">
+    <value>PDC: Testdata update</value>
+  </data>
+  <data name="MSG_UPDATE_TITLE" xml:space="preserve">
+    <value>PDC: Commit changes</value>
+  </data>
+  <data name="MSG_UPLOAD_FAILED_TEXT" xml:space="preserve">
+    <value>The test data was not uploaded.</value>
+  </data>
+  <data name="MSG_UPLOAD_OK_TEXT" xml:space="preserve">
+    <value>Testdata uploaded.
+{0} row(s) and {1} measurement(s).</value>
+  </data>
+  <data name="MSG_UPLOAD_OK_TITLE" xml:space="preserve">
+    <value>PDC: Testdata upload</value>
+  </data>
+  <data name="MSG_UPLOAD_TITLE" xml:space="preserve">
+    <value>PDC: Upload</value>
+  </data>
+  <data name="MSG_VALIDATE_TITLE" xml:space="preserve">
+    <value>PDC: Validation</value>
+  </data>
+  <data name="MSG_VALIDATION_FAILED" xml:space="preserve">
+    <value>Validation failed.</value>
+  </data>
+  <data name="MSG_VERSIONINFO_TITLE" xml:space="preserve">
+    <value>PDC: Versioninfo</value>
+  </data>
+  <data name="PRIVILEGE_READ_ONLY" xml:space="preserve">
+    <value>Read-Only</value>
+  </data>
+  <data name="PRIVILEGE_UPLOAD" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="VALIDATOR_BINARY_NOT_FOUND" xml:space="preserve">
+    <value>The file {0} could not be found</value>
+  </data>
+  <data name="VALIDATOR_BINARY_TOO_LARGE" xml:space="preserve">
+    <value>The file {0} is too large for upload. (File has {1} bytes. Maximum is {2})</value>
+  </data>
+  <data name="VALIDATOR_COMPOUND_INFO_MISSING" xml:space="preserve">
+    <value>CompoundNo is missing</value>
+  </data>
+  <data name="VALIDATOR_DERIVED_MISSING" xml:space="preserve">
+    <value>At least one derived result must be present</value>
+  </data>
+  <data name="VALIDATOR_DIFFERENTIATING" xml:space="preserve">
+    <value>Differentiating parameter must not be empty</value>
+  </data>
+  <data name="VALIDATOR_MANDATORY" xml:space="preserve">
+    <value>Mandatory field must not be empty</value>
+  </data>
+  <data name="VALIDATOR_NUMERIC_CONVERSION" xml:space="preserve">
+    <value>Cannot convert {0} into a numeric value</value>
+  </data>
+  <data name="VALIDATOR_PREPNO_MISSING" xml:space="preserve">
+    <value>PreparationNo is missing</value>
+  </data>
+  <data name="VALIDATOR_UNKNOWN_FILE_TYPE" xml:space="preserve">
+    <value>The type of the file {0} is not supported ({1})</value>
+  </data>
+  <data name="MSG_AUTOUPDATE_TITLE" xml:space="preserve">
+    <value>PDC: Autoupdate</value>
+  </data>
+  <data name="MSG_AUTOUPDATE_VALUES" xml:space="preserve">
+    <value>The studies already exist in PDC:
+    
+Experimentlevelparameter:
+{0}
+
+Should the data be replaced/updated? </value>
+  </data>
+  <data name="MSG_DESERIALIZATION_WORKBOOK_TITLE" xml:space="preserve">
+    <value>PDC: Deserialization Error</value>
+  </data>
+  <data name="MSG_DESERIALIZATION_WORKBOOK_TEXT" xml:space="preserve">
+    <value>An old  PDC-Workbook {0} is invalid.
+Should the marker as PDC-Workbook be removed?
+That would mean, the Workbook will not be recognized as PDC-Workbook anymore.</value>
+  </data>
+  <data name="MSG_CWID_PWD_MISSING" xml:space="preserve">
+    <value>Please enter cwid and password</value>
+  </data>
+  <data name="MSG_INVALID_FORMAT" xml:space="preserve">
+    <value>{0} is not a valid number</value>
+  </data>
+  <data name="MSG_NO_COMPOUNDINFO_SELECTED" xml:space="preserve">
+    <value>At least one of Prepno, Structure, MW of MF must be selected</value>
+  </data>
+  <data name="Action_CI_Prepno_Caption" xml:space="preserve">
+    <value>R&amp;etrieve Prep No</value>
+  </data>
+  <data name="MSG_OUT_OF_RANGE" xml:space="preserve">
+    <value>The value must be between {0} and {1}</value>
+  </data>
+  <data name="MSG_CompoundInfoOverride_Text" xml:space="preserve">
+    <value>The selected area is not empty. Proceed?</value>
+  </data>
+  <data name="Action_ClearData_BarTitle" xml:space="preserve">
+    <value>&amp;Clear</value>
+  </data>
+  <data name="Action_SearchTestdata_BarTitle" xml:space="preserve">
+    <value>&amp;Search</value>
+  </data>
+  <data name="Action_UploadWorkbook_BarTitle" xml:space="preserve">
+    <value>&amp;Upload</value>
+  </data>
+  <data name="MSG_GeneralException_Title" xml:space="preserve">
+    <value>PDC: An exception occured</value>
+  </data>
+  <data name="MSG_MeasurementException_Title" xml:space="preserve">
+    <value>PDC: Measurement data error</value>
+  </data>
+  <data name="MSG_CompoundInfo_TITLE" xml:space="preserve">
+    <value>PDC: Chemical Data</value>
+  </data>
+  <data name="MSG_INFO_TITLE" xml:space="preserve">
+    <value>PDC: Info</value>
+  </data>
+  <data name="StructureFormatValidation_Title" xml:space="preserve">
+    <value>PDC: Structure Format - Validation</value>
+  </data>
+  <data name="MSG_OVERLAP" xml:space="preserve">
+    <value>Check Structure Format Dialog: Conflict with target cells</value>
+  </data>
+  <data name="MSG_CONFIRM_UPDATE_WITHOUT_MEASUREMENTS" xml:space="preserve">
+    <value>PDC: Do you really want to save the selected experiments without measurements?</value>
+  </data>
+  <data name="MSG_USER_ABORTED_ACTION" xml:space="preserve">
+    <value>User aborted action.</value>
+  </data>
+  <data name="ATOMCOLOR_FILE_MISSING" xml:space="preserve">
+    <value>'{0}' not found. Get missing file!</value>
+  </data>
+  <data name="MSG_INVALID_WORKBOOK_DEFINED_NAME_DELTED" xml:space="preserve">
+    <value>You are using a workbook, which once have had PDC-Sheets.
+Some references have been found and removed to avoid crashs.
+
+Please save the workbook.</value>
+  </data>
+  <data name="MSG_AUTO_FILTER_SET_UPDATE" xml:space="preserve">
+    <value>You selected hidden rows. Therefore it's not allowed to update data. 
+    
+Probably this happened as you have filtered data. 
+Unfilter the sheet and try again.</value>
+  </data>
+  <data name="MSG_PATH_NO_WRITABLE" xml:space="preserve">
+    <value>{0} is not writable. Updates will not work. Please contact your administrator.</value>
+  </data>
+  <data name="MSG_ERROR_TIMEOUT" xml:space="preserve">
+    <value>Timeout: PDC has reached the predefined limit for waiting on a response from the server. Your upload data will be processed normally, but your client will not receive any transfer status information for this upload.
+Please check your data using the PDC client after 1 day. In addition you can check your upload report in the PDC Portal.
+To change the timeout limit of your PDC client or receive further information please contact your service desk. The PDC team will gladly consult and assist you.</value>
+  </data>
+  <data name="MSG_AUTO_FILTER_SET_UPLOAD" xml:space="preserve">
+    <value>It is not allowed to set a filter before uploading data. Please remove the filter.</value>
+  </data>
+  <data name="MSG_COMException_Restart" xml:space="preserve">
+    <value>Restart EXCEL for proper Data Handling.</value>
+  </data>
+  <data name="MSG_COMException_Title" xml:space="preserve">
+    <value>PDC: An exception occured in Excel</value>
+  </data>
+  <data name="MSG_UPDATE_RECORDS_DELETED" xml:space="preserve">
+    <value>One or more records have been deleted from the database. Please retrieve the current data.</value>
+  </data>
+  <data name="MSG_TOO_MANY_SEARCH_PARAMS_TEXT" xml:space="preserve">
+    <value>Please try again with fewer search parameters or update rows.</value>
+  </data>
+  <data name="MSG_TOO_MANY_SEARCH_PARAMS_TITLE" xml:space="preserve">
+    <value>Too many Parameters for search or update</value>
+  </data>
+  <data name="MSG_FAILED_TO_ADD_SECRET_PIC_TEXT" xml:space="preserve">
+    <value>Failed to add the confidential image. Error message was written to the log file.</value>
+  </data>
+  <data name="MSG_FAILED_TO_ADD_SECRET_PIC_TITLE" xml:space="preserve">
+    <value>Confidential Image</value>
+  </data>
+</root>

@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenLib</name>
+    </assembly>
+    <members>
+        <member name="T:PDCOpenLibrary.TestStruct">
+            <summary>
+            structure that might be used for information transfer
+            </summary>
+        </member>
+        <member name="T:PDCOpenLibrary.PDCOpenLib">
+            <summary>
+            the OpenPDC public Class
+            that servres all the public functions for use in Excel as UDF or in VBA
+            </summary>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.#ctor">
+            <summary>
+            constructor of PDCOpenLib class
+            </summary>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.IsEmpty(System.String)">
+            <summary>
+            Convenience method to check for a null or empty string
+            </summary>
+            <param name="arg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.EnsureCapacity(Microsoft.Office.Interop.Excel.Range,System.String,System.Int32)">
+            <summary>
+            Sets the size of corresponding measurement to the specified size
+            </summary>
+            <param name="anyRange">Provides a link to the Excel object model</param>
+            <param name="aListRangeName">The list range name pointing to a measurement table</param>
+            <param name="aSize">The desired size of the table</param>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.GetButton(System.String,Microsoft.Office.Core.CommandBarPopup)">
+            <summary>
+            Returns the button with the specified tag in the specified menu.
+            </summary>
+            <param name="aTag"></param>
+            <param name="tmpPDCMenu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.GetCompoundInformation(PDCOpenLibrary.TestStruct@)">
+             <summary>
+             retrieves from CoumpoundInformationService a CompoundInfoStructure
+             including Picture and Molfile
+             </summary>
+             <param name="CI">
+               
+             </param>
+             <returns>
+                1 = compound ID and prep pair valid
+                0 = compound ID and prep are both valid, pair is invalid (don't go together)
+               -1 = compound ID is valid, prep is invalid   
+               -2 = compound ID is invalid, prep is valid 
+               -3 = compound ID is invalid, prep is invalid
+               -4 = user not logged in 
+             -999 = undetermined error
+            </returns>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.GetMolFormula(System.String)">
+            <summary>
+            retrieves for a CompondNo the Mol Formula
+            </summary>
+            <param name="compoundNo">the compound number, e.g. BAY 101079</param>
+            <returns>the Mol Formula, or errorinformation</returns>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.GetMolWeight(System.String)">
+            <summary>
+            retrieves for a CompondNo the Mol weight
+            </summary>
+            <param name="CompoundNo">the compounf number</param>
+            <returns>the mol weight</returns>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.GetStructureDrawing(System.String,Microsoft.Office.Interop.Excel.Range,System.Int32,System.Int32,System.Object)">
+            <summary>
+             retrieves the Molfile for a given compound number,
+             and place it to the given range
+            </summary>
+            <param name="compoundNo">the compound number</param>
+            <param name="targetRange">the target range</param>
+            <param name="cellWidth">fix cell width for the cell. structure will be resized</param>
+            <param name="cellHeight">fix cell height for the cell. structure will be resized. 
+                        IF width AND height is zero, the cell is resized the size of the structure</param>
+            <param name="hydroges">as literal one off (ALL, NONE, HETERO, TERMINAL, HETEROORTERMINAL)</param>
+            <returns></returns>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.GetSystemFont(System.String,System.Single)">
+            <summary>
+              Returns a system font object with the given name and size.
+            </summary>
+            <param name="fontName">
+              The name of the font.
+            </param>
+            <param name="fontSize">
+              The size of the font.
+            </param>
+            <returns>
+              A system font object with the given name and size.
+            </returns>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.GetVersion">
+            <summary>
+            Returns the version of the open library
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:PDCOpenLibrary.PDCOpenLib.LoggedInUser">
+            <summary>
+            Property for the login state
+            </summary>
+        </member>
+        <member name="P:PDCOpenLibrary.PDCOpenLib.IsLoggedIn">
+            <summary>
+            Property for the login state
+            </summary>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.IsSymyxComponentInstalled">
+            <summary>
+              Returns true, when there is ISIS/Draw, MDL Draw or Symyx Draw installed.
+              Otherwise false.
+            </summary>
+            <returns>
+              True, when there is ISIS/Draw, MDL Draw or Symyx Draw installed.
+              False otherwise.
+            </returns>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.OpenLibRevision">
+            <summary>
+            Returns the revision information for the open library
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.PaintStructure(System.String,Microsoft.Office.Interop.Excel.Range)">
+            <summary>
+              Prints the image of the structure for the given compound no to the given target range.
+            </summary>
+            <param name="compoundNo">
+              The compound no of the structure.
+            </param>
+            <param name="targetRange">
+              The cell where the image shall be written.
+            </param>
+            <returns>
+               1 when it was successfull.
+               0 when an unknown error happened.
+              -1 when the user is not logged in.
+              -2 when the Symyx components are not installed.
+              -3 when a necessary parameter is null.
+              -4 when there exist no structure information for the given compound no.
+            </returns>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.PaintStructureSpecial(System.String,Microsoft.Office.Interop.Excel.Range,System.Int32,System.Int32,System.String,System.Single,System.Boolean,System.String,System.String,System.Single,System.Boolean,System.Single,System.Boolean)">
+            <summary>
+              Prints the image of the structure for the given compound no to the given target range.
+              The output format will be set by the different settings.
+            </summary>
+            <param name="compoundNo">
+              The compound no a of the structure.
+            </param>
+            <param name="targetRange">
+              The cell where the image shall be written.
+            </param>
+            <param name="cellWidth">
+              fix cell width for the cell. structure will be resized
+            </param>
+            <param name="cellHeight">
+              fix cell height for the cell. structure will be resized. 
+              IF width AND height is zero, the cell is resized the size of the structure
+            </param>
+            <param name="chemLabelFont">
+              The name of the font for the chemical labels.
+            </param>
+            <param name="chemLabelFontSize">
+              The size of the font for the chemical labels.
+            </param>
+            <param name="displayCarbonLabels">
+              A flag, whether the carbon labels shall be printed or not.
+            </param>
+            <param name="hydrogenDisplayMode">
+              A string containing the hydrogen display mode. Values are:
+              All, Hetero, HeteroOrTerminal, None or Terminal
+            </param>
+            <param name="textFont">
+              The name of the font for the text labels.
+            </param>
+            <param name="textFontSize">
+              The size of the font for the text labels.
+            </param>
+            <param name="transparentBackground">
+              A flag, whether the background shall be transparent or not.
+            </param>
+            <param name="bondLength">
+            The length of the bonds.
+            </param>
+            <param name="atomColor">
+              A flag, whether the atom shouild be colored or not
+            </param>
+            <returns>
+               1 when it was successfull.
+               0 when an unknown error happened.
+              -1 when the user is not logged in.
+              -2 when the Symyx components are not installed.
+              -3 when a necessary parameter is null.
+              -4 when there exist no structure information for the given compound no.
+            </returns>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.RegisterFunction(System.Type)">
+            <summary>
+            registers the COM functions of this class
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:PDCOpenLibrary.PDCOpenLib.UnregisterFunction(System.Type)">
+            <summary>
+            deregisters the COM functions of this class
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="P:PDCOpenLibrary.PDCOpenLib.FontNameArial">
+            <summary>
+              Gets the name of the arial font.
+            </summary>
+        </member>
+        <member name="P:PDCOpenLibrary.PDCOpenLib.FontNameCourier">
+            <summary>
+              Gets the name of the courier font.
+            </summary>
+        </member>
+    </members>
+</doc>

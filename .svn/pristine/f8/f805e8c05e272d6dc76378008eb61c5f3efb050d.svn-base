@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://pdc/webservices/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://pdc/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://pdc/webservices/">
+      <s:element name="GetCompoundInformationTest">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCompoundInformationTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompoundInformationTestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompoundInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ci" type="tns:CompoundInformation" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameters" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CompoundInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Molfile" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MolWeight" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MolFormula" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompoundNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PreparationNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MolImageArray" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errorinformation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result_CompoundCheck" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result_PreparationCheck" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result_MCCheck" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MCNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCompoundInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompoundInformationResult" type="tns:ArrayOfParameterMap" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfParameterMap">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ParameterMap" nillable="true" type="tns:ParameterMap" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ParameterMap">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Paramname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Paramvalue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCompoundInformationBitmap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ci" type="tns:CompoundInformation" />
+            <s:element minOccurs="0" maxOccurs="1" name="profile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompoundInformationBitmapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompoundInformationBitmapResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompoundInformationMolfile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ci" type="tns:CompoundInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompoundInformationMolfileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompoundInformationMolfileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompoundInformationMolweight">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ci" type="tns:CompoundInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompoundInformationMolweightResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCompoundInformationMolweightResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompoundInformationFormula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ci" type="tns:CompoundInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompoundInformationFormulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompoundInformationFormulaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompoundInformationAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ci" type="tns:CompoundInformation" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImageFormat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Hydroges" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompoundInformationAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompoundInformationAllResult" type="tns:CompoundInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckCompoundInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ci" type="tns:CompoundInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckCompoundInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckCompoundInformationResult" type="tns:CompoundInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCompoundInformationTestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationTest" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationTestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationBitmapSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationBitmap" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationBitmapSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationBitmapResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationMolfileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationMolfile" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationMolfileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationMolfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationMolweightSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationMolweight" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationMolweightSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationMolweightResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationFormulaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationFormula" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationFormulaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationFormulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationAllSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationAll" />
+  </wsdl:message>
+  <wsdl:message name="GetCompoundInformationAllSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompoundInformationAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckCompoundInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckCompoundInformation" />
+  </wsdl:message>
+  <wsdl:message name="CheckCompoundInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckCompoundInformationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CompoundInformationServiceSoap">
+    <wsdl:operation name="GetCompoundInformationTest">
+      <wsdl:input message="tns:GetCompoundInformationTestSoapIn" />
+      <wsdl:output message="tns:GetCompoundInformationTestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformation">
+      <wsdl:input message="tns:GetCompoundInformationSoapIn" />
+      <wsdl:output message="tns:GetCompoundInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationBitmap">
+      <wsdl:input message="tns:GetCompoundInformationBitmapSoapIn" />
+      <wsdl:output message="tns:GetCompoundInformationBitmapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationMolfile">
+      <wsdl:input message="tns:GetCompoundInformationMolfileSoapIn" />
+      <wsdl:output message="tns:GetCompoundInformationMolfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationMolweight">
+      <wsdl:input message="tns:GetCompoundInformationMolweightSoapIn" />
+      <wsdl:output message="tns:GetCompoundInformationMolweightSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationFormula">
+      <wsdl:input message="tns:GetCompoundInformationFormulaSoapIn" />
+      <wsdl:output message="tns:GetCompoundInformationFormulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationAll">
+      <wsdl:input message="tns:GetCompoundInformationAllSoapIn" />
+      <wsdl:output message="tns:GetCompoundInformationAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCompoundInformation">
+      <wsdl:input message="tns:CheckCompoundInformationSoapIn" />
+      <wsdl:output message="tns:CheckCompoundInformationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CompoundInformationServiceSoap" type="tns:CompoundInformationServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCompoundInformationTest">
+      <soap:operation soapAction="http://pdc/webservices/GetCompoundInformationTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformation">
+      <soap:operation soapAction="http://pdc/webservices/GetCompoundInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationBitmap">
+      <soap:operation soapAction="http://pdc/webservices/GetCompoundInformationBitmap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationMolfile">
+      <soap:operation soapAction="http://pdc/webservices/GetCompoundInformationMolfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationMolweight">
+      <soap:operation soapAction="http://pdc/webservices/GetCompoundInformationMolweight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationFormula">
+      <soap:operation soapAction="http://pdc/webservices/GetCompoundInformationFormula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationAll">
+      <soap:operation soapAction="http://pdc/webservices/GetCompoundInformationAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCompoundInformation">
+      <soap:operation soapAction="http://pdc/webservices/CheckCompoundInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CompoundInformationServiceSoap12" type="tns:CompoundInformationServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCompoundInformationTest">
+      <soap12:operation soapAction="http://pdc/webservices/GetCompoundInformationTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformation">
+      <soap12:operation soapAction="http://pdc/webservices/GetCompoundInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationBitmap">
+      <soap12:operation soapAction="http://pdc/webservices/GetCompoundInformationBitmap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationMolfile">
+      <soap12:operation soapAction="http://pdc/webservices/GetCompoundInformationMolfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationMolweight">
+      <soap12:operation soapAction="http://pdc/webservices/GetCompoundInformationMolweight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationFormula">
+      <soap12:operation soapAction="http://pdc/webservices/GetCompoundInformationFormula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompoundInformationAll">
+      <soap12:operation soapAction="http://pdc/webservices/GetCompoundInformationAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCompoundInformation">
+      <soap12:operation soapAction="http://pdc/webservices/CheckCompoundInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CompoundInformationService">
+    <wsdl:port name="CompoundInformationServiceSoap" binding="tns:CompoundInformationServiceSoap">
+      <soap:address location="http://localhost:2837/PDCCompoundInformationService/CompoundInformationService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CompoundInformationServiceSoap12" binding="tns:CompoundInformationServiceSoap12">
+      <soap12:address location="http://localhost:2837/PDCCompoundInformationService/CompoundInformationService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

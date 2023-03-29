@@ -1,0 +1,19 @@
+## environment
+PDCPortalURL=https://by-pdc-dev.bayer-ag.com/pdc
+PDCServiceURL=https://by-pdc-dev.bayer-ag.com/pdc/services/PDCService
+WSCustomerManagementServiceURL=https://phuserqa.intranet.cnb/wscustomermanagement_server/services/WsCustomerManagement
+# In the PDC-Installer the following URL has port 8173. In order not to forget that the Tomcat must also be available on that port, leave this port although it is not neccessary.
+PDCUpdateURL=https://by-pdc-dev.bayer-ag.com:8173/pdc_update_service
+PDCUpdateUser=pdcuser
+PDCUpdateLicense=jCk0Iscp2/asEMyhoRua6Joq2Smn80oCHLx/lgYHqec=
+
+# Draws a border around the data entry area
+DrawDataEntryBorder=false
+# sets language of menu
+Language=english
+#Language=german
+#Menu Shortcut and text for retrieve measurement level data (SMT), Shortcut must be in Excel format
+RetrieveMeasurementsShortcut=^d
+RetrieveMeasurementsShortcutText=CTRL-D
+#Timeout for webservice in milliseconds
+WebserviceTimeoutMillies=600000
