@@ -37,11 +37,11 @@ jobs:
       shell: powershell
       run: |
            ./"Configure_PdcLib_for_QA_Build.ps1" -PdcBaseUrlQA ${{secrets.PdcBaseUrlQA}} -PdcServiceUrlQA ${{secrets.PdcServiceUrlQA}}
-   # - name: check
-   # run: |
-   #      cd ./bin/release/
-   #     "%DotNetFrameworkSDK4.0_x86_Path%\tlbexp.exe" OpenLib.dll OpenLib.tlb
-   #    "%DotNetFrameworkSDK4.0_x86_Path%\tlbexp.exe" PDCExcelAddIn.dll PDCExcelAddIn.tlb       
+    - name: check
+    run: |
+       cd ./bin/release/
+      "%DotNetFrameworkSDK4.0_x86_Path%\tlbexp.exe" OpenLib.dll OpenLib.tlb
+      "%DotNetFrameworkSDK4.0_x86_Path%\tlbexp.exe" PDCExcelAddIn.dll PDCExcelAddIn.tlb       
     
     - name: deploy 
       run: ./"Deploy.ps1" -$APPLICATIONID -$BUILDNUMBER	 -$DEPLOYMENTDIRECTORY -$LANGUAGE -$STAGE -$WORKINGDIRECTORY
