@@ -11,6 +11,9 @@ jobs:
     steps:
     - name: check out repo
       uses: actions/checkout@v2
+      
+    - name: see folder architecture
+      run: tree /f 
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1
