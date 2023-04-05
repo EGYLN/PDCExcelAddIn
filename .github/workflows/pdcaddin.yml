@@ -40,6 +40,10 @@ jobs:
       shell: powershell
       run: |
            ./"Configure_PdcLib_for_QA_Build.ps1" -PdcBaseUrlQA ${{secrets.PdcBaseUrlQA}} -PdcServiceUrlQA ${{secrets.PdcServiceUrlQA}}
+    
+    - name: Build app for release
+      run: msbuild PDCExcelAddIn.sln -t:rebuild -verbosity:diag -property:Configuration=Release /p:Platform=AnyCPU
+          
     - name: check
       run: |
        cd ./bin/release/
@@ -59,6 +63,4 @@ jobs:
       run: |
            ./"Configure_for_PROD_Build.ps1" -PdcBaseUrlPROD ${{secrets.PdcBaseUrlPROD}} -PdcServiceUrlPROD ${{secrets.PdcServiceUrlPROD}}
  
-    - name: Build app for release
-      run: msbuild PDCExcelAddIn.sln -t:rebuild -verbosity:diag -property:Configuration=Release /p:Platform=AnyCPU
-          
+  
