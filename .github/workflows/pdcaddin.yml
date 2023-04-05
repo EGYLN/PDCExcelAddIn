@@ -42,7 +42,7 @@ jobs:
            ./"Configure_PdcLib_for_QA_Build.ps1" -PdcBaseUrlQA ${{secrets.PdcBaseUrlQA}} -PdcServiceUrlQA ${{secrets.PdcServiceUrlQA}}
     
     - name: Build app for release
-      run: msbuild PDCExcelAddIn.sln -t:rebuild -verbosity:diag -property:Configuration=Release /p:Platform=AnyCPU
+      run: msbuild PDCExcelAddIn.sln -t:rebuild -verbosity:diag -property:Configuration=Release /p:Platform=Any CPU
           
     - name: check
       run: |
