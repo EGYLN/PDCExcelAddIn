@@ -44,6 +44,9 @@ jobs:
     #- name: Build app for release
     # run: msbuild PDCExcelAddIn.sln -t:rebuild -verbosity:diag -property:Configuration=Release /p:Platform=Any CPU
       
+    - name: Setup 4.8 .NET SDKs
+      run: Elskom/setup-latest-dotnet@v4.8
+      
     - name: Build app for release
       run: msbuild ./PDCExcelAddIn/"PDCExcelAddIn.csproj" -t:rebuild -verbosity:diag -property:Configuration=Release 
           
@@ -53,7 +56,7 @@ jobs:
       #   "%(FrameworkSdkDir)\bin\NETFX 4.8 Tools%\tlbexp.exe" OpenLib.dll OpenLib.tlb
       #   "%(FrameworkSdkDir)\bin\NETFX 4.8 Tools%\tlbexp.exe" PDCExcelAddIn.dll PDCExcelAddIn.tlb 
     
-    - name: deploy 
+    - name: deploy
       run: ./"Deploy.ps1" -$APPLICATIONID -$BUILDNUMBER	 -$DEPLOYMENTDIRECTORY -$LANGUAGE -$STAGE -$WORKINGDIRECTORY
       
     - name: Configure for DEV Build
