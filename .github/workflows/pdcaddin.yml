@@ -46,9 +46,6 @@ jobs:
     #- name: Build app for release
     # run: msbuild PDCExcelAddIn.sln -t:rebuild -verbosity:diag -property:Configuration=Release /p:Platform=Any CPU
       
-    - name: Setup 4.8 .NET SDKs
-      run: setup-latest-dotnet@v4.8
-      
     - name: Build app for release
       run: msbuild ./PDCExcelAddIn/"PDCExcelAddIn.csproj" -t:rebuild -verbosity:diag -property:Configuration=Release 
           
