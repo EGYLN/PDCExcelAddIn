@@ -50,7 +50,7 @@ jobs:
     # run: msbuild PDCExcelAddIn.sln -t:rebuild -verbosity:diag -property:Configuration=Release /p:Platform=Any CPU
       
     - name: Build app for release
-      run: msbuild ./PDCExcelAddIn/"PDCExcelAddIn.csproj" -t:rebuild -verbosity:diag -property:Configuration=Release 
+      run: msbuild ./PDCExcelAddIn/"PDCExcelAddIn.csproj" -t:rebuild -verbosity:diag -property:Configuration=Release /p:Platform=AnyCPU
           
     #- name: check
      # run: |
