@@ -58,8 +58,8 @@ jobs:
     - name: check
       run: |
        #cd ./bin/release/
-          C:\"Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\tlbexp.exe" ./output/OpenLib.dll ./bin/release/OpenLib.tlb
-          C:\"Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\tlbexp.exe" ./output/PDCExcelAddIn.dll ./bin/release/PDCExcelAddIn.tlb 
+          C:\"Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\tlbexp.exe" ./output/OpenLib.dll OpenLib.tlb
+          C:\"Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\tlbexp.exe" ./output/PDCExcelAddIn.dll PDCExcelAddIn.tlb 
     
     - name: deploy
       run: ./"Deploy.ps1" -$APPLICATIONID -$BUILDNUMBER	 -$DEPLOYMENTDIRECTORY -$LANGUAGE -$STAGE -$WORKINGDIRECTORY
