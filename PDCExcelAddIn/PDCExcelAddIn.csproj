@@ -139,19 +139,7 @@
     This section enables pre- and post-build steps. However, in VSTO use
     MSBuild tasks instead of these properties.       
   -->
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-   <ManifestKeyFile>PDCExcelAddIn.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestCertificateThumbprint>93B3A565599D1D6AD1DE13CDA908C3A11CE9D80E</ManifestCertificateThumbprint>
-  </PropertyGroup>
+  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Debug\</OutputPath>
