@@ -123,6 +123,19 @@
     WarningLevel
       Warning level for the compiler.
   -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PDCExcelAddIn_3_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FFBB7D1BD456B0E15CFA2F37C7C7C4B53E6E8A1D</ManifestCertificateThumbprint>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>false</Optimize>
@@ -449,7 +462,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="PDCExcelAddIn_1_TemporaryKey.pfx" />
+    <None Include="PDCExcelAddIn_3_TemporaryKey.pfx" />
     <None Include="PDCExcelAddIn_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
