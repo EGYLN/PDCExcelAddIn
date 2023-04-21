@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <!--
     This section defines project-level properties.
@@ -123,19 +123,6 @@
     WarningLevel
       Warning level for the compiler.
   -->
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>PDCExcelAddIn_3_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestCertificateThumbprint>FFBB7D1BD456B0E15CFA2F37C7C7C4B53E6E8A1D</ManifestCertificateThumbprint>
-  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>false</Optimize>
@@ -152,7 +139,19 @@
     This section enables pre- and post-build steps. However, in VSTO use
     MSBuild tasks instead of these properties.       
   -->
-  
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PDCExcelAddIn_3_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FFBB7D1BD456B0E15CFA2F37C7C7C4B53E6E8A1D</ManifestCertificateThumbprint>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Debug\</OutputPath>
@@ -275,7 +274,6 @@
   -->
   <ItemGroup>
     <Compile Include="actions\ActionStatus.cs" />
-    <Compile Include="actions\PremarationNumber.cs" />
     <Compile Include="actions\ClearDataAction.cs" />
     <Compile Include="actions\CompoundInfoActionKind.cs" />
     <Compile Include="actions\DeleteAction.cs" />
@@ -462,6 +460,8 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="PDCExcelAddIn_1_TemporaryKey.pfx" />
+    <None Include="PDCExcelAddIn_2_TemporaryKey.pfx" />
     <None Include="PDCExcelAddIn_3_TemporaryKey.pfx" />
     <None Include="PDCExcelAddIn_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
