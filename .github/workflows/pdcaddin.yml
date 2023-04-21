@@ -55,8 +55,8 @@ jobs:
     - name: check
       run: |
        cd ./bin/release/
-         "%(FrameworkSdkDir)\bin\NETFX 4.8 Tools%\tlbexp.exe" OpenLib.dll OpenLib.tlb
-         "%(FrameworkSdkDir)\bin\NETFX 4.8 Tools%\tlbexp.exe" PDCExcelAddIn.dll PDCExcelAddIn.tlb 
+         "%(FrameworkSdkDir)\bin\NETFX 4.8 Tools%\tlbexp.exe" ./master/output/OpenLib.dll OpenLib.tlb
+         "%(FrameworkSdkDir)\bin\NETFX 4.8 Tools%\tlbexp.exe" ./master/output/PDCExcelAddIn.dll PDCExcelAddIn.tlb 
     
     - name: deploy
       run: ./"Deploy.ps1" -$APPLICATIONID -$BUILDNUMBER	 -$DEPLOYMENTDIRECTORY -$LANGUAGE -$STAGE -$WORKINGDIRECTORY
