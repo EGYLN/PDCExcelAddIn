@@ -51,7 +51,10 @@ jobs:
       
     #- name: Build app for release
      # run: msbuild ./PDCExcelAddIn/"PDCExcelAddIn.csproj" -t:rebuild -verbosity:diag -property:Configuration=Release /p:Platform=AnyCPU
-          
+     
+    - name: create bin and release folder
+      run: md ./bin/release/
+      
     - name: check
       run: |
        cd ./bin/release/
